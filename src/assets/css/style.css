@@ -191,7 +191,7 @@ body::-webkit-scrollbar {
     font-weight: 500;
     border: 1px solid;
     margin-top: 40px;
-    transition: .5s;
+    transition: .3s;
 }
 #timer .timer-btn .ticket-btn:hover {
     background-color: var(--main-color);
@@ -241,7 +241,7 @@ body::-webkit-scrollbar {
     font-weight: 600;
     padding: 5px 30px;
     margin-right: 20px;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 #about .about-btn:hover {
@@ -258,7 +258,7 @@ body::-webkit-scrollbar {
     font-size: 12px;
     font-weight: 600;
     padding: 7px 30px;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 #about #about-rugistar:hover {
@@ -350,7 +350,7 @@ body::-webkit-scrollbar {
     padding: 5px 30px;
     font-weight: 600;
     border: none;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 #evants .regiser-btn:hover {
@@ -364,7 +364,7 @@ body::-webkit-scrollbar {
     font-size: 15px;
     padding: 5px 33px;
     margin-bottom: 13px;
-    transition: 0.5s;
+    transition: 0.3s;
 
 }
 
@@ -405,7 +405,7 @@ body::-webkit-scrollbar {
     padding: 5px 33px;
     margin-bottom: 13px;
     border: 1px solid var(--main-color);
-    transition: 0.5s;
+    transition: 0.3s;
 
 }
 
