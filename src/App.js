@@ -172,7 +172,7 @@ function App() {
                 <p>
                   Feb 23(date)
                   <br /> sun - 10:00pm <br />
-                  name of evant- place
+                  name of event- place
                 </p>
               </div>
             </div>
@@ -194,7 +194,7 @@ function App() {
                 <p>
                   Feb 23(date)
                   <br /> sun - 10:00pm <br />
-                  name of evant- place
+                  name of event- place
                 </p>
               </div>
             </div>
@@ -216,7 +216,7 @@ function App() {
                 <p>
                   Feb 23(date)
                   <br /> sun - 10:00pm <br />
-                  name of evant- place
+                  name of event- place
                 </p>
               </div>
             </div>
