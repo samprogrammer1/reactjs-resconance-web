@@ -86,7 +86,7 @@ function App() {
         </div>
       </section>
       <section id="resonance" className="">
-        <h1 className="titleHead text-center mt-4">THE LINEUP OF RESOONANCE</h1>
+        <h1 className="titleHead text-center mt-4">THE LINEUP OF RESONANCE</h1>
         <div className="container mt-5">
           <div className="row">
           <Swiper
