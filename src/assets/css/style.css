@@ -186,6 +186,8 @@ body::-webkit-scrollbar {
 
 #timer .timer-btn .ticket-btn {
     padding: 15px 25px;
+    color: black !important;
+    border: none !important;
     font-family: Roboto;
     font-size: 18px;
     font-weight: 500;
