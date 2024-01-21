@@ -161,7 +161,7 @@ function App() {
         </div>
       </section>
       <section id="evants">
-        <h1 className="titleHead text-center ">EVANTS</h1>
+        <h1 className="titleHead text-center ">EVENTS</h1>
         <div className="container">
           <div className="row evants">
             <div className="col-xxl-4 col-md-6 col-sm-12 evant-img-text">
