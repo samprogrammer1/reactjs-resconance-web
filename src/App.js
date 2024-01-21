@@ -77,7 +77,7 @@ function App() {
                   KNOW MORE
                 </button>
                 <button id="about-rugistar" type="button">
-                  RUGISTER NOW
+                  Register NOW
                 </button>
               </div>
             </div>
@@ -181,7 +181,7 @@ function App() {
                 View Details
               </button>
               <button className="regiser-btn" type="button">
-                Rugister Now
+                Register Now
               </button>
             </div>
           </div>
@@ -203,7 +203,7 @@ function App() {
                 View Details
               </button>
               <button className="regiser-btn" type="button">
-                Rugister Now
+                Register Now
               </button>
             </div>
           </div>
@@ -225,7 +225,7 @@ function App() {
                 View Details
               </button>
               <button className="regiser-btn" type="button">
-                Rugister Now
+                Register Now
               </button>
             </div>
           </div>
