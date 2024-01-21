@@ -1,10 +1,37 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import { Link as ScrollLink  } from "react-scroll";
 
 function AppBar() {
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      let currentSectionId = "home";
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+          currentSectionId = section.id;
+        }
+      });
+
+      setActiveSection(currentSectionId);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
       <div className="container">
-        <a className="navbar-brand" href="#">Resonance</a>
+        <NavLink className="navbar-brand" to="/">
+          Resonance
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -20,7 +47,9 @@ function AppBar() {
           aria-labelledby="offcanvasDarkNavbarLabel"
         >
           <div className="offcanvas-header">
-            <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+            <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              Menu
+            </h5>
             <button
               type="button"
               className="btn-close btn-close-white"
@@ -31,26 +60,103 @@ function AppBar() {
           <div className="offcanvas-body">
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
+              <ScrollLink
+                  activeClass="active"
+                  to="home"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={200}
+                  className={`nav-link ${
+                    activeSection === "home" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveSection("home")}
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  Home
+                </ScrollLink>
+              </li>
+              
+              <li className="nav-item">
+                <ScrollLink
+                  activeClass="active"
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={200}
+                  className={`nav-link ${
+                    activeSection === "about" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveSection("about")}
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  ABOUT
+                </ScrollLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#about">About</a>
+                <ScrollLink
+                  activeClass="active"
+                  to="evants"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={200}
+                  className={`nav-link ${
+                    activeSection === "evants" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveSection("evants")}
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  Schedule
+                </ScrollLink>
+              </li>
+
+              <li className="nav-item">
+                <ScrollLink
+                  activeClass="active"
+                  to="gallery"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={200}
+                  className={`nav-link ${
+                    activeSection === "gallery" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveSection("gallery")}
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  Gallery
+                </ScrollLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#resonance">Schedule</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#gallery">Gallery</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#footer-top">Contact</a>
+                <ScrollLink
+                  // activeClass="active"
+                  to="contacts"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={200}
+                  className={`nav-link ${
+                    activeSection === "contacts" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveSection("contacts")}
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  Contact
+                </ScrollLink>
               </li>
             </ul>
           </div>
         </div>
       </div>
     </nav>
-  )
+  );
 }
 
-export default AppBar
+export default AppBar;

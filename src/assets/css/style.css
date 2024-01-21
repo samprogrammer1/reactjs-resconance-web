@@ -201,9 +201,6 @@ body::-webkit-scrollbar {
     border: none !important;
 }
 
-#about {
-    margin-top: 80px;
-}
 
 #about .about-text {
     color: white;
@@ -300,11 +297,6 @@ body::-webkit-scrollbar {
 .swiper-pagination-bullet-active {
     background-color: var(--main-color) !important; /* Change to your desired color */
 }
-
-#evants {
-    padding: 40px 0;
-}
-
 #evants .evants {
     display: flex;
     justify-content: space-between;
@@ -364,8 +356,24 @@ body::-webkit-scrollbar {
 }
 
 #evants .regiser-btn:hover {
-    color: blueviolet;
+    /* color: blueviolet; */
 }
+
+.my-masonry-grid {
+    display: flex;
+    margin-left: -30px;
+    width: auto;
+  }
+  .my-masonry-grid_column {
+    padding-left: 30px;
+    background-clip: padding-box;
+  }
+  
+  /* Style your items */
+  .my-masonry-grid_column > div {
+    margin-bottom: 30px;
+  }
+  
 
 #evants .see-more-btn {
     background-color: #000;
@@ -393,9 +401,6 @@ body::-webkit-scrollbar {
     justify-content: center;
 }
 
-#gallery {
-    padding: 40px 0;
-}
 
 #gallery .container {
     display: flex;
@@ -427,10 +432,6 @@ body::-webkit-scrollbar {
 .gallery-see-more {
     display: flex;
     justify-content: center;
-}
-
-#sponsors {
-    padding: 60px 0;
 }
 
 #sponsors .sponsors h2 {
