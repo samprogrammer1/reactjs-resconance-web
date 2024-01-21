@@ -1,6 +1,17 @@
 import AppBar from "./layouts/AppBar";
-import banner from "./assets/img/main-banner.png";
+import banner from "./assets/img/BANNER.png";
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 function App() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
   return (
     <div className="App">
       <AppBar />
@@ -80,151 +91,203 @@ function App() {
         <h1 className="titleHead text-center mt-4">THE LINEUP OF RESOONANCE</h1>
         <div className="container mt-5">
           <div className="row">
-            <div className="col d-flex justify-content-center">
-              <div className="card">
-                <img src={require('./assets/img/4.jpg')} className="card-img-top" alt="..." />
-                <div className="day">DAY 1</div>
+            <Slider {...settings}>
+              <div className="resonance-card col-3 d-flex justify-content-center">
+                <div className="card">
+                  <img
+                    src={require("./assets/img/4.jpg")}
+                    className="card-img-top"
+                    alt="..."
+                  />
+                  <div className="day">DAY 1</div>
+                </div>
               </div>
-            </div>
-            <div className="col d-flex justify-content-center">
-              <div className="card">
-                <img src={require('./assets/img/6.jpg')} className="card-img-top" alt="..." />
-                <div className="day">DAY 2</div>
+              <div className="resonance-card col-3 d-flex justify-content-center">
+                <div className="card">
+                  <img
+                    src={require("./assets/img/6.jpg")}
+                    className="card-img-top"
+                    alt="..."
+                  />
+                  <div className="day">DAY 2</div>
+                </div>
               </div>
-            </div>
-            <div className="col d-flex justify-content-center">
-              <div className="card" >
-                <img src={require('./assets/img/5.jpg')} className="card-img-top" alt="..." />
-                <div className="day">DAY 3</div>
+              <div className="resonance-card col-3 d-flex justify-content-center">
+                <div className="card">
+                  <img
+                    src={require("./assets/img/5.jpg")}
+                    className="card-img-top"
+                    alt="..."
+                  />
+                  <div className="day">DAY 3</div>
+                </div>
               </div>
-            </div>
+              <div className="resonance-card col-3 d-flex justify-content-center">
+                <div className="card">
+                  <img
+                    src={require("./assets/img/5.jpg")}
+                    className="card-img-top"
+                    alt="..."
+                  />
+                  <div className="day">DAY 4 </div>
+                </div>
+              </div>
+            </Slider>
           </div>
         </div>
       </section>
       <section id="evants">
-      <h1 className="titleHead text-center ">EVANTS</h1>
-      <div className="container">
-        <div className="row evants">
-          <div className="col-xxl-4 col-md-6 col-sm-12 evant-img-text">
-            <div className="event-img">
-              <img src={require('./assets/img/1.png')} alt="..." />
+        <h1 className="titleHead text-center ">EVANTS</h1>
+        <div className="container">
+          <div className="row evants">
+            <div className="col-xxl-4 col-md-6 col-sm-12 evant-img-text">
+              <div className="event-img">
+                <img src={require("./assets/img/1.png")} alt="..." />
+              </div>
+              <div className="evant-text">
+                <p>
+                  Feb 23(date)
+                  <br /> sun - 10:00pm <br />
+                  name of evant- place
+                </p>
+              </div>
             </div>
-            <div className="evant-text">
-              <p>Feb 23(date)<br/> sun - 10:00pm <br/>name of evant- place</p>
+            <div className="col-xxl-2 col-md-4 col-sm-12 evant-btn">
+              <button className="details-btn" type="button">
+                View Details
+              </button>
+              <button className="regiser-btn" type="button">
+                Rugister Now
+              </button>
             </div>
           </div>
-          <div className="col-xxl-2 col-md-4 col-sm-12 evant-btn">
-            <button className="details-btn" type="button">View Details</button>
-            <button className="regiser-btn" type="button">Rugister Now</button>
+          <div className="row evants">
+            <div className="col-xxl-4 col-md-6 col-sm-12 evant-img-text">
+              <div className="event-img">
+                <img src={require("./assets/img/1.png")} alt="..." />
+              </div>
+              <div className="evant-text">
+                <p>
+                  Feb 23(date)
+                  <br /> sun - 10:00pm <br />
+                  name of evant- place
+                </p>
+              </div>
+            </div>
+            <div className="col-xxl-2 col-md-4 col-sm-12 evant-btn">
+              <button className="details-btn" type="button">
+                View Details
+              </button>
+              <button className="regiser-btn" type="button">
+                Rugister Now
+              </button>
+            </div>
+          </div>
+          <div className="row evants">
+            <div className="col-xxl-4 col-md-6 col-sm-12 evant-img-text">
+              <div className="event-img">
+                <img src={require("./assets/img/1.png")} alt="..." />
+              </div>
+              <div className="evant-text">
+                <p>
+                  Feb 23(date)
+                  <br /> sun - 10:00pm <br />
+                  name of evant- place
+                </p>
+              </div>
+            </div>
+            <div className="col-xxl-2 col-md-4 col-sm-12 evant-btn">
+              <button className="details-btn" type="button">
+                View Details
+              </button>
+              <button className="regiser-btn" type="button">
+                Rugister Now
+              </button>
+            </div>
+          </div>
+          <div className="row see-more">
+            <div className="col-xxl-2 col-md-4 col-sm-12 see-btn">
+              <button className="see-more-btn" type="button">
+                SEE MORE
+              </button>
+            </div>
           </div>
         </div>
-        <div className="row evants">
-          <div className="col-xxl-4 col-md-6 col-sm-12 evant-img-text">
-            <div className="event-img">
-              <img src={require('./assets/img/1.png')} alt="..." />
-            </div>
-            <div className="evant-text">
-              <p>Feb 23(date)<br/> sun - 10:00pm <br/>name of evant- place</p>
-            </div>
-          </div>
-          <div className="col-xxl-2 col-md-4 col-sm-12 evant-btn">
-            <button className="details-btn" type="button">View Details</button>
-            <button className="regiser-btn" type="button">Rugister Now</button>
-          </div>
-        </div>
-        <div className="row evants">
-          <div className="col-xxl-4 col-md-6 col-sm-12 evant-img-text">
-            <div className="event-img">
-              <img src={require('./assets/img/1.png')} alt="..." />
-            </div>
-            <div className="evant-text">
-              <p>Feb 23(date)<br /> sun - 10:00pm <br />name of evant- place</p>
-            </div>
-          </div>
-          <div className="col-xxl-2 col-md-4 col-sm-12 evant-btn">
-            <button className="details-btn" type="button">View Details</button>
-            <button className="regiser-btn" type="button">Rugister Now</button>
-          </div>
-        </div>
-        <div className="row see-more">
-          <div className="col-xxl-2 col-md-4 col-sm-12 see-btn">
-            <button className="see-more-btn" type="button">SEE MORE</button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="gallery">
-      <h1 className="titleHead text-center mt-4">GALLERY</h1>
-      <div className="container">
-        <div className="row">
-          <div className="col d-flex justify-content-center">
-            <div className="card" >
-              <img src={require('./assets/img/4.jpg')} className="card-img-top" alt="..." />
-            </div>
-          </div>
-          <div className="col d-flex justify-content-center">
-            <div className="card" >
-              <img src={require('./assets/img/5.jpg')} className="card-img-top" alt="..." />
-            </div>
-          </div>
-          <div className="col d-flex justify-content-center">
-            <div className="card" >
-              <img src={require('./assets/img/6.jpg')} className="card-img-top" alt="..." />
-            </div>
-          </div>
-          <div className="col d-flex justify-content-center">
-            <div className="card" >
-              <img src={require('./assets/img/4.jpg')} className="card-img-top" alt="..." />
-            </div>
-          </div>
-        </div>
- 
-        
-      </div>
-      <div className="gallery-see-more">
-          <button className="gallery-btn" type="button">SEE MORE</button>
-      </div>
-    </section>
-    <footer>
-      <div id="footer-top">
+      </section>
+      <section id="gallery">
+        <h1 className="titleHead text-center mt-4">GALLERY</h1>
         <div className="container">
           <div className="row">
-            <div className="col-md-4">
-              <div className="phone">
-                <h2>Phone</h2>
-                <p>+91 9876543210</p>
-              </div>
-              <div className="email">
-                <h2>Email</h2>
-                <p>Resonance2024@gmail.com</p>
+            <div className="col d-flex justify-content-center">
+              <div className="card">
+                <img
+                  src={require("./assets/img/4.jpg")}
+                  className="card-img-top"
+                  alt="..."
+                />
               </div>
             </div>
-            <div className="col-md-5">
-              <div className="touch">
-                <h2>Keep In Touch</h2>
-                <div className="icon">
-                  <i className="fa-brands fa-instagram"></i>
-                  <i className="fa-brands fa-youtube"></i>
-                  <i className="fa-brands fa-facebook"></i>
+            <div className="col d-flex justify-content-center">
+              <div className="card">
+                <img
+                  src={require("./assets/img/5.jpg")}
+                  className="card-img-top"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="gallery-see-more">
+          <button className="gallery-btn" type="button">
+            SEE MORE
+          </button>
+        </div>
+      </section>
+      <footer>
+        <div id="footer-top">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-4">
+                <div className="phone">
+                  <h2>Phone</h2>
+                  <p>+91 9876543210</p>
+                </div>
+                <div className="email">
+                  <h2>Email</h2>
+                  <p>Resonance2024@gmail.com</p>
+                </div>
+              </div>
+              <div className="col-md-5">
+                <div className="touch">
+                  <h2>Keep In Touch</h2>
+                  <div className="icon">
+                    <i className="fa-brands fa-instagram"></i>
+                    <i className="fa-brands fa-youtube"></i>
+                    <i className="fa-brands fa-facebook"></i>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div id="footer-buttom">
-        <div className="container">
-          <div className="row footer-buttom">
-            <div className="col-xxl-6 col-sm-6 copyright">
-              <p>copyright @ 2024 . <span>Resonance - JIET Jodhpur</span></p>
-            </div>
-            <div className="col-xxl-6 col-sm-6 Terms">
-              <p className="gap-2">CRAFTED BY<a > SAMEER ALI</a></p>
+        <div id="footer-buttom">
+          <div className="container">
+            <div className="row footer-buttom">
+              <div className="col-xxl-6 col-sm-6 copyright">
+                <p>
+                  copyright @ 2024 . <span>Resonance - JIET Jodhpur</span>
+                </p>
+              </div>
+              <div className="col-xxl-6 col-sm-6 Terms">
+                <p className="gap-2">
+                  CRAFTED BY<a> SAMEER ALI</a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
     </div>
   );
 }

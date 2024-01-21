@@ -191,7 +191,7 @@ body::-webkit-scrollbar {
     font-weight: 500;
     border: 1px solid;
     margin-top: 40px;
-    transition: .5s;
+    transition: 0.5s;
 }
 #timer .timer-btn .ticket-btn:hover {
     background-color: var(--main-color);
@@ -273,6 +273,10 @@ body::-webkit-scrollbar {
 
 .card {
     background-color: transparent !important;
+}
+.slick-slide {
+    width: 200px !important;
+    margin: 0 30px !important;
 }
 
 #resonance .day {
