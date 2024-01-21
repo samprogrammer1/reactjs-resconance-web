@@ -1,17 +1,15 @@
 import AppBar from "./layouts/AppBar";
-import banner from "./assets/img/BANNER.png";
-import Slider from "react-slick";
+import banner from "./assets/img/main-banner.png";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+
+import { EffectCoverflow, Pagination } from 'swiper/modules';
+
 function App() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-  };
   return (
     <div className="App">
       <AppBar />
@@ -91,9 +89,39 @@ function App() {
         <h1 className="titleHead text-center mt-4">THE LINEUP OF RESOONANCE</h1>
         <div className="container mt-5">
           <div className="row">
-            <Slider {...settings}>
-              <div className="resonance-card col-3 d-flex justify-content-center">
-                <div className="card">
+          <Swiper
+           effect={'coverflow'}
+           grabCursor={true}
+           centeredSlides={true}
+           slidesPerView={'auto'}
+           coverflowEffect={{
+             rotate: 0,
+             stretch: 0,
+             depth: 100,
+             modifier: 1,
+             slideShadows: false,
+           }}
+           pagination={{
+            clickable: true,
+          }}
+           breakpoints={{
+            640: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+           }}
+           initialSlide={1}
+           spaceBetween={0}
+           modules={[EffectCoverflow, Pagination]}
+           className="mySwiper"
+          >
+            <SwiperSlide><div className="resonance-card px-3  d-flex justify-content-center">
+                <div className="card ">
                   <img
                     src={require("./assets/img/4.jpg")}
                     className="card-img-top"
@@ -102,37 +130,33 @@ function App() {
                   <div className="day">DAY 1</div>
                 </div>
               </div>
-              <div className="resonance-card col-3 d-flex justify-content-center">
-                <div className="card">
+            </SwiperSlide>
+            <SwiperSlide><div className="resonance-card px-3 d-flex justify-content-center">
+                <div className="card ">
                   <img
                     src={require("./assets/img/6.jpg")}
                     className="card-img-top"
                     alt="..."
                   />
-                  <div className="day">DAY 2</div>
+                  <div className="day">DAY 1</div>
                 </div>
               </div>
-              <div className="resonance-card col-3 d-flex justify-content-center">
-                <div className="card">
+              </SwiperSlide>
+            <SwiperSlide>
+            <div className="resonance-card px-3 d-flex justify-content-center">
+              <div className="card ">
                   <img
                     src={require("./assets/img/5.jpg")}
                     className="card-img-top"
                     alt="..."
                   />
-                  <div className="day">DAY 3</div>
+                  <div className="day">DAY 1</div>
                 </div>
-              </div>
-              <div className="resonance-card col-3 d-flex justify-content-center">
-                <div className="card">
-                  <img
-                    src={require("./assets/img/5.jpg")}
-                    className="card-img-top"
-                    alt="..."
-                  />
-                  <div className="day">DAY 4 </div>
-                </div>
-              </div>
-            </Slider>
+            </div>
+            </SwiperSlide>
+            
+            {/* Add more slides as needed */}
+          </Swiper>
           </div>
         </div>
       </section>
@@ -218,7 +242,7 @@ function App() {
         <h1 className="titleHead text-center mt-4">GALLERY</h1>
         <div className="container">
           <div className="row">
-            <div className="col d-flex justify-content-center">
+            <div className="col-6 col-md-4 col-lg-3 d-flex justify-content-center">
               <div className="card">
                 <img
                   src={require("./assets/img/4.jpg")}
@@ -227,7 +251,25 @@ function App() {
                 />
               </div>
             </div>
-            <div className="col d-flex justify-content-center">
+            <div className="col-6 col-md-4 col-lg-3 d-flex justify-content-center">
+              <div className="card">
+                <img
+                  src={require("./assets/img/5.jpg")}
+                  className="card-img-top"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <div className="col-6 col-md-4 col-lg-3 d-flex justify-content-center">
+              <div className="card">
+                <img
+                  src={require("./assets/img/5.jpg")}
+                  className="card-img-top"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <div className="col-6 col-md-4 col-lg-3 d-flex justify-content-center">
               <div className="card">
                 <img
                   src={require("./assets/img/5.jpg")}

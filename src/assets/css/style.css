@@ -195,8 +195,8 @@ body::-webkit-scrollbar {
 }
 #timer .timer-btn .ticket-btn:hover {
     background-color: var(--main-color);
-    color: white;
-    border: none;
+    color: white !important;
+    border: none !important;
 }
 
 #about {
@@ -289,6 +289,14 @@ body::-webkit-scrollbar {
     font-weight: 700;
     text-align: center;
 
+}
+.swiper-pagination-bullet {
+    background: var(--white-color) !important; /* Change to your desired color */
+}
+  
+  /* Customize the active pagination bullet */
+.swiper-pagination-bullet-active {
+    background-color: var(--main-color) !important; /* Change to your desired color */
 }
 
 #evants {
@@ -580,7 +588,14 @@ body::-webkit-scrollbar {
     #timer .clock-timer {
         font-size: 35px;
     }
-
+    .copyright {
+        text-align: center;
+    }
+    .footer-buttom .Terms {
+        display: flex;
+        justify-content: center;
+        border-top: 1px solid white;
+    }
     #timer .clock-head {
         font-size: 10px;
     }
