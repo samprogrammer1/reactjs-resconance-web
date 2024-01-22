@@ -16,26 +16,19 @@ export default function Gallery() {
     800: 2, // screen width 800px - 2 columns
     500: 1, // screen width 500px - 1 column
   };
- 
+
   const [model, setModel] = useState(false);
   const [tempimgsrc, setTempImgSrc] = useState(false);
-  const getImg = (imgSrc) =>{
+  const getImg = (imgSrc) => {
     setTempImgSrc(imgSrc);
     setModel(true);
-
-  }
+  };
 
   return (
-    
-    <section
-        id="gallery" className="container mt-5 pt-1"
-    >
-       
-      <div className={ model ? 'model open': 'model'}>
-      <i class="fa-solid fa-xmark" onClick={() =>setModel(false)}></i>
-      <img
-              src={tempimgsrc}
-            />
+    <section id="gallery" className="container mt-5 pt-1">
+      <div className={model ? "model open" : "model"}>
+        <i class="fa-solid fa-xmark" onClick={() => setModel(false)}></i>
+        <img src={tempimgsrc} />
       </div>
       <h1 className="titleHead text-center mt-5">GALLERY</h1>
       <Masonry
@@ -45,7 +38,6 @@ export default function Gallery() {
       >
         {images.map((image, index) => (
           <div key={index} onClick={() => getImg(image)}>
-            
             <img
               src={image}
               alt={`Gallery item ${index}`}
