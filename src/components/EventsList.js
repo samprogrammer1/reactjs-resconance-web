@@ -19,9 +19,9 @@ function EventsList() {
               </div>
             </div>
             <div className="col-xxl-2 col-md-4 col-sm-12 evant-btn">
-              <button className="details-btn" type="button">
+              {/* <button className="details-btn" type="button">
                 View Details
-              </button>
+              </button> */}
               <button className="regiser-btn" type="button">
                 Register Now
               </button>
@@ -41,9 +41,9 @@ function EventsList() {
               </div>
             </div>
             <div className="col-xxl-2 col-md-4 col-sm-12 evant-btn">
-              <button className="details-btn" type="button">
+              {/* <button className="details-btn" type="button">
                 View Details
-              </button>
+              </button> */}
               <button className="regiser-btn" type="button">
                 Register Now
               </button>
@@ -63,9 +63,9 @@ function EventsList() {
               </div>
             </div>
             <div className="col-xxl-2 col-md-4 col-sm-12 evant-btn">
-              <button className="details-btn" type="button">
+              {/* <button className="details-btn" type="button">
                 View Details
-              </button>
+              </button> */}
               <button className="regiser-btn" type="button">
                 Register Now
               </button>

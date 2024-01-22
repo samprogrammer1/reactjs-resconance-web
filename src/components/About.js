@@ -11,9 +11,9 @@ function About() {
               <h1 className="about-resonance">R E S O N A N C E</h1>
               <h1 className="about-num">2 0 2 4</h1>
               <div className="about-all-btn">
-                <button id="about-more" className="about-btn" type="button">
+                {/* <button id="about-more" className="about-btn" type="button">
                   KNOW MORE
-                </button>
+                </button> */}
                 <button id="about-rugistar" type="button">
                   Register NOW
                 </button>
