@@ -93,7 +93,7 @@ function AppBar() {
                   data-bs-dismiss="offcanvas"
                   aria-label="Close"
                 >
-                  ABOUT
+                  About
                 </ScrollLink>
               </li>
               <li className="nav-item">
@@ -111,7 +111,7 @@ function AppBar() {
                   data-bs-dismiss="offcanvas"
                   aria-label="Close"
                 >
-                  Schedule
+                  Events
                 </ScrollLink>
               </li>
 

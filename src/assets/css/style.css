@@ -398,7 +398,7 @@ body::-webkit-scrollbar {
     font-weight: 500;
     border: 1px solid;
     margin-top: 40px;
-    transition: .3s;
+    transition: .3s ease;
 }
 #timer .timer-btn .ticket-btn:hover {
     background-color: var(--main-color);
@@ -445,7 +445,7 @@ body::-webkit-scrollbar {
     font-weight: 600;
     padding: 5px 30px;
     margin-right: 20px;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 #about .about-btn:hover {
@@ -462,7 +462,7 @@ body::-webkit-scrollbar {
     font-size: 12px;
     font-weight: 600;
     padding: 7px 30px;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 #about #about-rugistar:hover {
@@ -507,6 +507,12 @@ body::-webkit-scrollbar {
     justify-content: space-between;
     align-items: center;
     margin: 15px 0px;
+    padding-block: 10px;
+    background: black !important;
+    box-shadow: .5px .5px 8px #434343d1;
+    border-radius: 10px;
+    /* border: .2px solid  #808080b3; */
+    
 }
 
 
@@ -527,10 +533,32 @@ body::-webkit-scrollbar {
 
 #evants p {
     font-family: Poppins;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     color: rgba(255, 255, 255, 1);
     padding-left: 20px;
+    line-height: 1.3;
+    letter-spacing: .3px;
+}
+#evants p .name {
+  font-size: 20px;
+  line-height: 0px;
+}
+#evants p .time {
+  font-size: 12px;
+  color: #959292;
+}
+#evants p .event_name {
+  color: #959292;
+  font-size: 14px;
+}
+#evants p i {
+  font-size: 14px;
+  color: white;
+} 
+#evants p .address{
+  color: #959292;
+  font-size: 14px;
 }
 
 .evants .evant-btn {
@@ -552,17 +580,19 @@ body::-webkit-scrollbar {
 
 #evants .regiser-btn {
     background: linear-gradient(270deg, #E33A19 52.96%, #FF6F9A 100%);
-
     color: #fff;
     font-size: 15px;
     padding: 5px 30px;
     font-weight: 600;
     border: none;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
+    border-radius: 3px;
 }
 
 #evants .regiser-btn:hover {
     /* color: blueviolet; */
+    background: white;
+    color: #000;
 }
 
 .my-masonry-grid {
@@ -588,7 +618,7 @@ body::-webkit-scrollbar {
     font-size: 15px;
     padding: 5px 33px;
     margin-bottom: 13px;
-    transition: 0.3s;
+    transition: 0.3s ease;
 
 }
 
@@ -626,7 +656,7 @@ body::-webkit-scrollbar {
     padding: 5px 33px;
     margin-bottom: 13px;
     border: 1px solid var(--main-color);
-    transition: 0.3s;
+    transition: 0.3s ease;
 
 }
 

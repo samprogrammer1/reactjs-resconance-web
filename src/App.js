@@ -12,9 +12,11 @@ const NotFound = () => <div><h2>404 Not Found</h2></div>;
 
 const App = () => {
   return (
+    <>
+    <LoadingScreen />
     <Router>
       <div>
-        <LoadingScreen />
+        
         <ScrollToTop />
         <AppBar />
         <Switch>
@@ -25,6 +27,7 @@ const App = () => {
         <Footer />
       </div>
     </Router>
+    </>
   );
 }
 

@@ -6,17 +6,20 @@ function EventsList() {
       <h1 className="titleHead text-center ">EVENTS</h1>
       <div className="container">
         <div className="row">
-          <div className="col-xxl-6 col-md-12 col-12">
-            <div className="row evants">
+          <div className="col-xxl-6 col-md-12 col-12 card">
+            <div className="row evants ">
               <div className="col-xxl-7    col-md-6 col-sm-12 evant-img-text">
                 <div className="event-img">
                   <img src={require("./../assets/img/1.png")} alt="..." />
                 </div>
                 <div className="evant-text">
                   <p>
-                    Feb 23(date)
-                    <br /> sun - 10:00pm <br />
-                    name of event- place
+                    <span className="name">Cricket</span><br/>
+                    <span className="time">sun - 10:00pm </span><br />
+                    <span className="event_name">
+                        name of event
+                    </span><br /> <i class="fa-solid fa-location-dot"></i>&nbsp;
+                    <span className="address" > place</span>
                   </p>
                 </div>
               </div>
@@ -30,17 +33,20 @@ function EventsList() {
               </div>
             </div>
           </div>
-          <div className="col-xxl-6 col-md-12 col-12">
-            <div className="row evants">
+          <div className="col-xxl-6 col-md-12 col-12 card">
+            <div className="row evants ">
               <div className="col-xxl-7    col-md-6 col-sm-12 evant-img-text">
                 <div className="event-img">
                   <img src={require("./../assets/img/1.png")} alt="..." />
                 </div>
                 <div className="evant-text">
                   <p>
-                    Feb 23(date)
-                    <br /> sun - 10:00pm <br />
-                    name of event- place
+                    <span className="name">Cricket</span><br/>
+                    <span className="time">sun - 10:00pm </span><br />
+                    <span className="event_name">
+                        name of event
+                    </span><br /> <i class="fa-solid fa-location-dot"></i>&nbsp;
+                    <span className="address" > place</span>
                   </p>
                 </div>
               </div>
@@ -54,17 +60,20 @@ function EventsList() {
               </div>
             </div>
           </div>
-          <div className="col-xxl-6 col-md-12 col-12">
-            <div className="row evants">
+          <div className="col-xxl-6 col-md-12 col-12 card">
+            <div className="row evants ">
               <div className="col-xxl-7    col-md-6 col-sm-12 evant-img-text">
                 <div className="event-img">
                   <img src={require("./../assets/img/1.png")} alt="..." />
                 </div>
                 <div className="evant-text">
                   <p>
-                    Feb 23(date)
-                    <br /> sun - 10:00pm <br />
-                    name of event- place
+                    <span className="name">Cricket</span><br/>
+                    <span className="time">sun - 10:00pm </span><br />
+                    <span className="event_name">
+                        name of event
+                    </span><br /> <i class="fa-solid fa-location-dot"></i>&nbsp;
+                    <span className="address" > place</span>
                   </p>
                 </div>
               </div>
@@ -78,17 +87,20 @@ function EventsList() {
               </div>
             </div>
           </div>
-          <div className="col-xxl-6 col-md-12 col-12">
-            <div className="row evants">
+          <div className="col-xxl-6 col-md-12 col-12 card">
+            <div className="row evants ">
               <div className="col-xxl-7    col-md-6 col-sm-12 evant-img-text">
                 <div className="event-img">
                   <img src={require("./../assets/img/1.png")} alt="..." />
                 </div>
                 <div className="evant-text">
                   <p>
-                    Feb 23(date)
-                    <br /> sun - 10:00pm <br />
-                    name of event- place
+                    <span className="name">Cricket</span><br/>
+                    <span className="time">sun - 10:00pm </span><br />
+                    <span className="event_name">
+                        name of event
+                    </span><br /> <i class="fa-solid fa-location-dot"></i>&nbsp;
+                    <span className="address" > place</span>
                   </p>
                 </div>
               </div>

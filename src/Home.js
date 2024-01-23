@@ -9,6 +9,7 @@ import Gallery from "./components/Gallery";
 import Footer from "./layouts/Footer";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import LoadingScreen from "./components/LoaderScreen";
 
 function Home() {
   
@@ -36,7 +37,11 @@ function Home() {
   },[])
 
   return (
-    isLoading ? <h1>Loading Data</h1> : <div className="App">
+    isLoading ? <div
+      className="container"
+    >
+      <h2>Coming Soon</h2>
+    </div> : <div className="App">
     <section id="home">
       <div className="home-container">
         <img className="home-page-banner" src={banner} alt="image" />
@@ -58,12 +63,8 @@ function Home() {
     <About />
     <EventsList />
     <Gallery />
-    
-    
-    
-    
-    
   </div>
+    
   );
 }
 
