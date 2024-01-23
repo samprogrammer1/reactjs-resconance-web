@@ -6,7 +6,7 @@ function EventsList() {
         <h1 className="titleHead text-center ">EVENTS</h1>
         <div className="container">
           <div className="row evants">
-            <div className="col-xxl-4 col-md-6 col-sm-12 evant-img-text">
+            <div className="col-xxl-4 col-md-6 col-sm-4 evant-img-text">
               <div className="event-img">
                 <img src={require("./../assets/img/1.png")} alt="..." />
               </div>
@@ -18,7 +18,7 @@ function EventsList() {
                 </p>
               </div>
             </div>
-            <div className="col-xxl-2 col-md-4 col-sm-12 evant-btn">
+            <div className="col-xxl-2 col-md-4 col-sm-4 evant-btn">
               {/* <button className="details-btn" type="button">
                 View Details
               </button> */}
@@ -28,7 +28,7 @@ function EventsList() {
             </div>
           </div>
           <div className="row evants">
-            <div className="col-xxl-4 col-md-6 col-sm-12 evant-img-text">
+            <div className="col-xxl-4 col-md-6 col-sm-4 evant-img-text">
               <div className="event-img">
                 <img src={require("./../assets/img/1.png")} alt="..." />
               </div>
@@ -40,7 +40,7 @@ function EventsList() {
                 </p>
               </div>
             </div>
-            <div className="col-xxl-2 col-md-4 col-sm-12 evant-btn">
+            <div className="col-xxl-2 col-md-4 col-sm-4 evant-btn">
               {/* <button className="details-btn" type="button">
                 View Details
               </button> */}
@@ -50,7 +50,7 @@ function EventsList() {
             </div>
           </div>
           <div className="row evants">
-            <div className="col-xxl-4 col-md-6 col-sm-12 evant-img-text">
+            <div className="col-xxl-4 col-md-6 col-sm-4 evant-img-text">
               <div className="event-img">
                 <img src={require("./../assets/img/1.png")} alt="..." />
               </div>
@@ -62,7 +62,7 @@ function EventsList() {
                 </p>
               </div>
             </div>
-            <div className="col-xxl-2 col-md-4 col-sm-12 evant-btn">
+            <div className="col-xxl-2 col-md-4 col-sm-4 evant-btn">
               {/* <button className="details-btn" type="button">
                 View Details
               </button> */}

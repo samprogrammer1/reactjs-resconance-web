@@ -307,7 +307,6 @@ body::-webkit-scrollbar {
 
 #evants .evant-img-text {
     display: flex;
-    justify-content: space-around;
     align-items: center;
 }
 
@@ -327,10 +326,13 @@ body::-webkit-scrollbar {
     font-weight: 700;
     color: rgba(255, 255, 255, 1);
     width: 170px;
+    padding-left: 20px;
 }
 
 .evants .evant-btn {
     padding-top: 10px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 #evants .details-btn {
@@ -614,13 +616,19 @@ body::-webkit-scrollbar {
     }
 
     .evants .evant-btn {
-        display: flex;
-        justify-content: space-around;
+        /* display: flex;
+        justify-content: space-around; */
 
     }
 
     #evants .details-btn {
         margin: 0;
+    }
+    
+}
+@media (max-width: 575px) {
+    #evants .evant-img-text{
+        justify-content: space-evenly;
     }
     
 }
