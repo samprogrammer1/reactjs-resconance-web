@@ -506,7 +506,7 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 30px;
+    margin: 15px 0px;
 }
 
 
@@ -518,7 +518,7 @@ body::-webkit-scrollbar {
 #evants img {
     width: 129px;
     height: 133px;
-    border-radius: 25px;
+    border-radius: 10px;
 }
 
 .card {
@@ -530,7 +530,6 @@ body::-webkit-scrollbar {
     font-size: 18px;
     font-weight: 700;
     color: rgba(255, 255, 255, 1);
-    width: 170px;
     padding-left: 20px;
 }
 
