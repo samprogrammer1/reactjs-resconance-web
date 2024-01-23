@@ -16,9 +16,7 @@ function EventsList() {
                   <p>
                     <span className="name">Cricket</span><br/>
                     <span className="time">sun - 10:00pm </span><br />
-                    <span className="event_name">
-                        name of event
-                    </span><br /> <i class="fa-solid fa-location-dot"></i>&nbsp;
+                    <i class="fa-solid fa-location-dot"></i>&nbsp;
                     <span className="address" > place</span>
                   </p>
                 </div>
@@ -43,9 +41,7 @@ function EventsList() {
                   <p>
                     <span className="name">Cricket</span><br/>
                     <span className="time">sun - 10:00pm </span><br />
-                    <span className="event_name">
-                        name of event
-                    </span><br /> <i class="fa-solid fa-location-dot"></i>&nbsp;
+                    <i class="fa-solid fa-location-dot"></i>&nbsp;
                     <span className="address" > place</span>
                   </p>
                 </div>
@@ -70,9 +66,7 @@ function EventsList() {
                   <p>
                     <span className="name">Cricket</span><br/>
                     <span className="time">sun - 10:00pm </span><br />
-                    <span className="event_name">
-                        name of event
-                    </span><br /> <i class="fa-solid fa-location-dot"></i>&nbsp;
+                     <i class="fa-solid fa-location-dot"></i>&nbsp;
                     <span className="address" > place</span>
                   </p>
                 </div>
@@ -97,9 +91,7 @@ function EventsList() {
                   <p>
                     <span className="name">Cricket</span><br/>
                     <span className="time">sun - 10:00pm </span><br />
-                    <span className="event_name">
-                        name of event
-                    </span><br /> <i class="fa-solid fa-location-dot"></i>&nbsp;
+                     <i class="fa-solid fa-location-dot"></i>&nbsp;
                     <span className="address" > place</span>
                   </p>
                 </div>

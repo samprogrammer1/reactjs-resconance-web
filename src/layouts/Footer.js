@@ -1,6 +1,6 @@
 import React from "react";
 
-function Footer() {
+function Footer({phone_no , facebook , instagram , youtube}) {
   return (
     <section id="contacts" >
         <footer>
@@ -20,10 +20,17 @@ function Footer() {
             <div className="col-md-5">
               <div className="touch">
                 <h2>Keep In Touch</h2>
-                <div className="icon">
-                  <i className="fa-brands fa-instagram"></i>
-                  <i className="fa-brands fa-youtube"></i>
-                  <i className="fa-brands fa-facebook"></i>
+                <div className="icon d-flex">
+                  <a href={instagram}>
+                    <i className="fa-brands fa-instagram d-flex justify-content-center align-items-center"></i>
+                  </a>
+                  <a href={youtube} >
+                    <i className="fa-brands fa-youtube d-flex justify-content-center align-items-center"></i>
+                  </a>
+                  <a href={facebook}>
+                    <i className="fa-brands fa-facebook d-flex justify-content-center align-items-center"></i>
+                  </a>
+                  
                 </div>
               </div>
             </div>

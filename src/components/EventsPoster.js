@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -49,16 +50,25 @@ function EventsPoster({posterData , image_path}) {
             {
               posterData.map((data, index)=>
                 <SwiperSlide key={index}>
-                  <div className="resonance-card px-3  d-flex justify-content-center">
-                    <div className="card ">
-                      <img
-                        src={image_path + data.img}
-                        className="card-img-top"
-                        alt="..."
-                      />
-                      <div className="day">DAY {data.day}</div>
+                  <div className='reflection-container'>
+                    {(Array.from({ length: 100 }, (_, i) => i + 1)).map((cell) => (
+                      <div key={cell} className={`reflection-grid-cell reflection-grid-cell-${cell}`}></div>
+                    ))}
+                    <div className='reflection-content'>
+                      <div className="resonance-card px-3  d-flex justify-content-center">
+                        <div className="card ">
+                          <img
+                            src={image_path + data.img}
+                            className="card-img-top"
+                            alt="..."
+                          />
+                          <div className="day">DAY {data.day}</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
+                  
+                  
                 </SwiperSlide>
               )
             }
