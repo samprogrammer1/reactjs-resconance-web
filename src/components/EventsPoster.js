@@ -8,7 +8,8 @@ import 'swiper/css/pagination';
 
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 
-function EventsPoster() {
+function EventsPoster({posterData , image_path}) {
+  console.log(posterData)
   return (
     <section id="resonance" className="">
         <h1 className="titleHead text-center mt-4">THE LINEUP OF RESONANCE</h1>
@@ -45,40 +46,22 @@ function EventsPoster() {
            modules={[EffectCoverflow, Pagination]}
            className="mySwiper"
           >
-            <SwiperSlide><div className="resonance-card px-3  d-flex justify-content-center">
-                <div className="card ">
-                  <img
-                    src={require("./../assets/img/4.jpg")}
-                    className="card-img-top"
-                    alt="..."
-                  />
-                  <div className="day">DAY 1</div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide><div className="resonance-card px-3 d-flex justify-content-center">
-                <div className="card ">
-                  <img
-                    src={require("./../assets/img/6.jpg")}
-                    className="card-img-top"
-                    alt="..."
-                  />
-                  <div className="day">DAY 1</div>
-                </div>
-              </div>
-              </SwiperSlide>
-            <SwiperSlide>
-            <div className="resonance-card px-3 d-flex justify-content-center">
-              <div className="card ">
-                  <img
-                    src={require("./../assets/img/5.jpg")}
-                    className="card-img-top"
-                    alt="..."
-                  />
-                  <div className="day">DAY 1</div>
-                </div>
-            </div>
-            </SwiperSlide>
+            {
+              posterData.map((data, index)=>
+                <SwiperSlide key={index}>
+                  <div className="resonance-card px-3  d-flex justify-content-center">
+                    <div className="card ">
+                      <img
+                        src={image_path + data.img}
+                        className="card-img-top"
+                        alt="..."
+                      />
+                      <div className="day">DAY {data.day}</div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              )
+            }
             
             {/* Add more slides as needed */}
           </Swiper>

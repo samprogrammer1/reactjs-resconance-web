@@ -5,6 +5,7 @@ import AppBar from './layouts/AppBar';
 import Home from './Home';
 import Footer from './layouts/Footer';
 import Gallery from './Gallery';
+import LoadingScreen from './components/LoaderScreen';
 
 // Components
 const NotFound = () => <div><h2>404 Not Found</h2></div>;
@@ -13,6 +14,7 @@ const App = () => {
   return (
     <Router>
       <div>
+        <LoadingScreen />
         <ScrollToTop />
         <AppBar />
         <Switch>

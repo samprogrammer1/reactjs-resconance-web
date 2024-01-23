@@ -8,7 +8,7 @@ function AppBar() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll("section");
-      let currentSectionId = "home";
+      let currentSectionId = "";
 
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
@@ -60,7 +60,7 @@ function AppBar() {
           <div className="offcanvas-body">
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
-              <ScrollLink
+                <ScrollLink
                   activeClass="active"
                   to="home"
                   spy={true}
