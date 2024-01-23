@@ -17,7 +17,7 @@ function Home() {
 
   const fetchData = async () => {
     try {
-      const res = await fetch("/api/event-data");
+      const res = await fetch("https://thejambh.com/api/event-data");
       if (!res.ok) {
         throw new Error('Network response was not ok');
       }
@@ -25,7 +25,7 @@ function Home() {
       setData(result.data);
       setIsLoader(false)
     } catch (error) {
-      console.log(error);
+      console.log('Error fetching data:', error);
     }
   };
   
