@@ -1,56 +1,57 @@
-.reflection-container{
-    position:relative;
-    display:inline-block;
-    vertical-align:middle;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    &:before{
-      color:#fff;
-      position:absolute;
-      left:-1rem;
-      top:50%;
-      font-size:6vh;
-      transform:translateX(-100%) translateY(-50%);
+.reflection-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  &:before {
+    color: #fff;
+    position: absolute;
+    left: -1rem;
+    top: 50%;
+    font-size: 6vh;
+    transform: translateX(-100%) translateY(-50%);
+  }
+  .reflection-content {
+    background-size: cover;
+    background-position: center;
+    transform: rotateX(0) rotateY(0);
+    pointer-events: none;
+    transition: 100ms linear transform;
+
+    overflow: hidden;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      left: -20%;
+      top: -20%;
+      background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
     }
-    .reflection-content{
-      background-size:cover;
-      background-position:center;
-      transform:rotateX(0) rotateY(0);
-      pointer-events:none;
-      transition:100ms linear transform;
-      
-      overflow:hidden;
-      &:before{
-        content:'';
-        position:absolute;
-        width:200%;
-        height:200%;
-        left:-20%;
-        top:-20%;
-        background: linear-gradient(rgba(255,255,255,0.2),rgba(0,0,0,0.2));
+  }
+  .reflection-grid-cell {
+    position: absolute;
+    z-index: 1;
+    width: 10%;
+    height: 10%;
+  }
+  @for $r from 1 to 11 {
+    @for $c from 1 to 11 {
+      .reflection-grid-cell-#{( ($r*10) + $c - 10)} {
+        top: ($r * 8%)-8%;
+        left: ($c * 10%)-10%;
       }
-    }
-    .reflection-grid-cell{
-      position:absolute;
-      z-index: 1;
-      width:10%;
-      height:10%;
-    }
-    @for $r from 1 to 11{ 
-      @for $c from 1 to 11 {
-        .reflection-grid-cell-#{( ($r*10) + $c - 10)}{
-          top:($r*8%)-8%;
-          left:($c*10%)-10%;
+      .reflection-grid-cell-#{( ($r*10) + $c - 10)}:hover
+        ~ .reflection-content {
+        transform: rotateX((($r * -2)+10deg))
+          rotateY((-10deg+ ($c * 2)))
+          scale(1.08);
+
+        &:before {
+          transform: translateY(25-(5% * $r));
         }
-        .reflection-grid-cell-#{( ($r*10) + $c - 10)}:hover ~ .reflection-content{
-          transform:rotateX((($r*-2)+10deg)) rotateY((-10deg+($c*2))) scale(1.08);
-          
-          &:before{
-            transform:translateY(25-(5%*$r));
-          }
-          
-        }
-        
       }
     }
   }
+}

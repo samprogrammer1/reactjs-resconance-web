@@ -6,6 +6,9 @@ import Home from "./Home";
 import Footer from "./layouts/Footer";
 import Gallery from "./Gallery";
 import LoadingScreen from "./components/LoaderScreen";
+import sports from "./sports";
+import technical from "./technical";
+import cultural from "./cultural";
 
 // Components
 const NotFound = () => (
@@ -25,6 +28,9 @@ const App = () => {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/gallery" component={Gallery} />
+            <Route path="/sports" component={sports} />
+            <Route path="/technical" component={technical} />
+            <Route path="/cultural" component={cultural} />
             <Route component={NotFound} />
           </Switch>
           <Footer />

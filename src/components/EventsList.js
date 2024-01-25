@@ -14,10 +14,12 @@ function EventsList() {
                 </div>
                 <div className="evant-text">
                   <p>
-                    <span className="name">Cricket</span><br/>
-                    <span className="time">sun - 10:00pm </span><br />
+                    <span className="name">Cricket</span>
+                    <br />
+                    <span className="time">sun - 10:00pm </span>
+                    <br />
                     <i class="fa-solid fa-location-dot"></i>&nbsp;
-                    <span className="address" > place</span>
+                    <span className="address"> place</span>
                   </p>
                 </div>
               </div>
@@ -39,10 +41,12 @@ function EventsList() {
                 </div>
                 <div className="evant-text">
                   <p>
-                    <span className="name">Cricket</span><br/>
-                    <span className="time">sun - 10:00pm </span><br />
+                    <span className="name">Cricket</span>
+                    <br />
+                    <span className="time">sun - 10:00pm </span>
+                    <br />
                     <i class="fa-solid fa-location-dot"></i>&nbsp;
-                    <span className="address" > place</span>
+                    <span className="address"> place</span>
                   </p>
                 </div>
               </div>
@@ -64,10 +68,12 @@ function EventsList() {
                 </div>
                 <div className="evant-text">
                   <p>
-                    <span className="name">Cricket</span><br/>
-                    <span className="time">sun - 10:00pm </span><br />
-                     <i class="fa-solid fa-location-dot"></i>&nbsp;
-                    <span className="address" > place</span>
+                    <span className="name">Cricket</span>
+                    <br />
+                    <span className="time">sun - 10:00pm </span>
+                    <br />
+                    <i class="fa-solid fa-location-dot"></i>&nbsp;
+                    <span className="address"> place</span>
                   </p>
                 </div>
               </div>
@@ -89,10 +95,12 @@ function EventsList() {
                 </div>
                 <div className="evant-text">
                   <p>
-                    <span className="name">Cricket</span><br/>
-                    <span className="time">sun - 10:00pm </span><br />
-                     <i class="fa-solid fa-location-dot"></i>&nbsp;
-                    <span className="address" > place</span>
+                    <span className="name">Cricket</span>
+                    <br />
+                    <span className="time">sun - 10:00pm </span>
+                    <br />
+                    <i class="fa-solid fa-location-dot"></i>&nbsp;
+                    <span className="address"> place</span>
                   </p>
                 </div>
               </div>
