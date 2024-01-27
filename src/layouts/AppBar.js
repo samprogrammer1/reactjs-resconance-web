@@ -30,7 +30,7 @@ function AppBar() {
     <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
       <div className="container">
         <NavLink className="navbar-brand" to="/">
-          <img src={require('./../assets/img/logo.png')} width="70px" />
+          <img src={require('./../assets/img/logo1.png')} width="120px" />
         </NavLink>
         <button
           className="navbar-toggler"
