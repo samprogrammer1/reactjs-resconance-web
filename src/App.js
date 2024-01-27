@@ -6,6 +6,7 @@ import Home from './Home';
 import Footer from './layouts/Footer';
 import Gallery from './Gallery';
 import LoadingScreen from './components/LoaderScreen';
+import TypeEvent from './TypeEvent';
 
 // Components
 const NotFound = () => <div><h2>404 Not Found</h2></div>;
@@ -22,6 +23,7 @@ const App = () => {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/gallery" component={Gallery} />
+          <Route path="/events/:type" component={TypeEvent} />
           <Route component={NotFound} />
         </Switch>
         <Footer />

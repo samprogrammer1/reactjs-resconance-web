@@ -18,6 +18,7 @@ function Home() {
 
   const fetchData = async () => {
     try {
+      console.log(" data " + process.env.REACT_APP_GET_API)
       const res = await fetch("https://thejambh.com/api/event-data");
       if (!res.ok) {
         throw new Error('Network response was not ok');

@@ -8,6 +8,7 @@ $(document).ready(function () {
             $('.navbar').css('background-color', 'transparent');
         }
     });
+
 });
 
 

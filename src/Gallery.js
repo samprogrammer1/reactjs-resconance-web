@@ -25,12 +25,18 @@ export default function Gallery() {
   };
 
   return (
-    <section id="gallery" className="container mt-5 pt-1">
+    <section id="gallery" className="container mt-md-5 mt-sm-1 pt-1">
+       <div className="space">
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+      </div>
       <div className={model ? "model open" : "model"}>
         <i class="fa-solid fa-xmark" onClick={() => setModel(false)}></i>
         <img src={tempimgsrc} />
       </div>
-      <h1 className="titleHead text-center mt-5">GALLERY</h1>
+      <h1 className="titleHead text-center mt-5 mt-sm-1">GALLERY</h1>
       <Masonry
         breakpointCols={breakpointColumnsObj}
         className="my-masonry-grid mt-5"
@@ -41,6 +47,7 @@ export default function Gallery() {
             <img
               src={image}
               alt={`Gallery item ${index}`}
+              className="card"
               style={{ width: "100%", display: "block" }}
             />
           </div>
