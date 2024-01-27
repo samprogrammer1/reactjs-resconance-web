@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import Masonry from "react-masonry-css";
 export default function Gallery() {
   const images = [
-    require("./assets/img/4.jpg"),
-    require("./assets/img/6.jpg"),
-    require("./assets/img/5.jpg"),
-    require("./assets/img/main-banner.png"),
-    require("./assets/img/BANNER.png"),
-    require("./assets/img/BANNER.png"),
+    require("./assets/img/gallery/1.JPG"),
+    require("./assets/img/gallery/2.jpg"),
+    require("./assets/img/gallery/23.jpg"),
+    require("./assets/img/gallery/7.jpg"),
+    require("./assets/img/gallery/3.jpg"),
+    require("./assets/img/gallery/6.jpg"),
+    require("./assets/img/gallery/4.jpg"),
+   ,
+   
     // Add more images here
   ];
   const breakpointColumnsObj = {

@@ -348,6 +348,9 @@ body::-webkit-scrollbar {
     font-weight: 700 !important;
     letter-spacing: 1.75px !important;
 }
+.navbar-brand img {
+  width: 160px;
+}
 
 .home-page-content h3 {
     text-align: center;
@@ -1055,6 +1058,9 @@ body::-webkit-scrollbar {
     .navbar {
         position: sticky !important;
     }
+    .navbar-brand img {
+      width: 135px;
+    }
 
     .navbar-nav .nav-link.active {
         color: var(--white-color) !important;
@@ -1070,7 +1076,9 @@ body::-webkit-scrollbar {
         justify-content: space-evenly;
         padding-bottom: 15px;
     }
-
+    .navbar-brand img {
+      width: 130px;
+    }
     .events .evant-btn {
         /* display: flex;
         justify-content: space-around; */
@@ -1082,15 +1090,12 @@ body::-webkit-scrollbar {
     }
     
 }
-@media (max-width: 575px) {
-    #events .evant-img-text{
-        /* justify-content: space-evenly; */
-    }
-    
-}
 
 
 @media (max-width: 520px) {
+  .navbar-brand img {
+    width: 120px;
+  }
     .titleHead {
         font-size: 22px;
         margin-bottom: 0px !important;
