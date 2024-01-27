@@ -559,7 +559,7 @@ body::-webkit-scrollbar {
   /* border: .2px solid  #808080b3; */
   
 }
-#gallery .particle::after {
+#events .particle::after {
   position: absolute;
   content: '';
   top: 560px;
