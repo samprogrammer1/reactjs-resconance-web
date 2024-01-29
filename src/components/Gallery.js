@@ -23,7 +23,7 @@ function Gallery() {
     };
   
     const [model, setModel] = useState(false);
-    const [tempimgsrc, setTempImgSrc] = useState(false);
+    const [tempimgsrc, setTempImgSrc] = useState('');
     const getImg = (imgSrc) => {
       setTempImgSrc(imgSrc);
       setModel(true);
@@ -36,7 +36,7 @@ const navigateToGallery = () => {
     <section id="gallery" className='my-5'>
         <h1 className="titleHead text-center mt-4">GALLERY</h1>
         <div className={model ? "model open" : "model"}>
-        <i class="fa-solid fa-xmark" onClick={() => setModel(false)}></i>
+        <i className="fa-solid fa-xmark" onClick={() => setModel(false)}></i>
         <img src={tempimgsrc} />
       </div>
         <div className="container">
@@ -48,7 +48,7 @@ const navigateToGallery = () => {
         {images.map((image, index) => (
           <div key={index} onClick={() => getImg(image)}>
             <img
-              src={image}
+              src={image && image.toString()}
               alt={`Gallery item ${index}`}
               className="card"
               style={{ width: "100%", display: "block" }}

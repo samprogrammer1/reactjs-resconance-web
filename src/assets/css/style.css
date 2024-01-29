@@ -627,15 +627,17 @@ body::-webkit-scrollbar {
 }
 
 #events img {
-    width: 129px;
-    height: 133px;
+    /* width: 129px;
+    height: 133px; */
     border-radius: 10px;
 }
 
 .card {
     margin-bottom: 30px;
 }
-
+#events .evant-text {
+  padding-top: 8px;
+}
 #events p {
     font-family: Poppins;
     font-size: 16px;
@@ -663,7 +665,7 @@ body::-webkit-scrollbar {
 } 
 #events p .address{
   color: #959292;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .events .evant-btn {
@@ -683,7 +685,7 @@ body::-webkit-scrollbar {
 }
 
 
-#events .regiser-btn {
+ .regiser-btn {
     background: linear-gradient(270deg, #E33A19 52.96%, #FF6F9A 100%);
     color: #fff;
     font-size: 15px;
@@ -694,7 +696,7 @@ body::-webkit-scrollbar {
     border-radius: 3px;
 }
 
-#events .regiser-btn:hover {
+.regiser-btn:hover {
     /* color: blueviolet; */
     background: white;
     color: #000;
@@ -937,6 +939,22 @@ body::-webkit-scrollbar {
     font-size: 20px;
 }
 
+
+#not-found .not-found {
+  height: 80vh;
+}
+
+.not-found h1 span{
+  color: var(--main-color) !important;
+}
+.not-found h1{
+  letter-spacing: .5rem;
+  font-size: 100px;
+  color: var(--white-color) !important;
+}
+.not-found p {
+  color: #a9a0a0;
+}
 
 
 #footer-top {

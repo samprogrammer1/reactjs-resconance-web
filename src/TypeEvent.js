@@ -1,118 +1,87 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import { useParams  , useHistory} from "react-router-dom";
+import EnvData from "./assets/json/data.json"
 
 function TypeEvent() {
+  const { type } = useParams();
+  const history = useHistory();
+  const [isLoading, setIsLoader] = useState(true);
+  const [data, setData] = useState([]);
+  const fetchData = async () => {
+    try {
+      console.log(" data " + process.env.REACT_APP_GET_API);
+      const res = await fetch("https://thejambh.com/api/event-data");
+      if (!res.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const result = await res.json();
+      const found = result.data.event_type_list.find(
+        (item) => item.event_type === type
+      );
+      if (found) {
+        setData(found.data);
+      }else {
+        history.push('/404');
+        return;
+      }
+      setIsLoader(false);
+    } catch (error) {
+      history.push('/404');
+      return;
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
     <section id="events" className="my-md-5">
       <h1 className="titleHead text-center mt-5 pt-md-5 pt-sm-2">EVENTS</h1>
       <div className="container">
-      <div className="space">
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-      </div>
-        <div className="row">
-          <div className="col-xxl-6 col-md-12 col-12 card">
-            
-            <div className="row events ">
-              <div className="col-xxl-7    col-md-6 col-sm-12 evant-img-text">
-                <div className="event-img">
-                  <img src={require("./assets/img/1.png")} alt="..." />
-                </div>
-                <div className="evant-text">
-                  <p>
-                    <span className="name">Cricket</span><br/>
-                    <span className="time">sun - 10:00pm </span><br />
-                    <i class="fa-solid fa-location-dot"></i>&nbsp;
-                    <span className="address" > place</span>
-                  </p>
-                </div>
-              </div>
-              <div className="col-xxl-4 col-md-4 col-12 my-2 evant-btn">
-                <button className="regiser-btn" type="button">
-                  Register Now
-                </button>
-              </div>
-            </div>
-          </div>
-          {/* <div className="col-xxl-6 col-md-12 col-12 card">
-            <div className="row events ">
-              <div className="col-xxl-7    col-md-6 col-sm-12 evant-img-text">
-                <div className="event-img">
-                  <img src={require("./../assets/img/1.png")} alt="..." />
-                </div>
-                <div className="evant-text">
-                  <p>
-                    <span className="name">Cricket</span><br/>
-                    <span className="time">sun - 10:00pm </span><br />
-                    <i class="fa-solid fa-location-dot"></i>&nbsp;
-                    <span className="address" > place</span>
-                  </p>
-                </div>
-              </div>
-              <div className="col-xxl-4 col-md-4 col-12 my-2 evant-btn">
-                <button className="regiser-btn" type="button">
-                  Register Now
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="col-xxl-6 col-md-12 col-12 card">
-            <div className="row events ">
-              <div className="col-xxl-7    col-md-6 col-sm-12 evant-img-text">
-                <div className="event-img">
-                  <img src={require("./../assets/img/1.png")} alt="..." />
-                </div>
-                <div className="evant-text">
-                  <p>
-                    <span className="name">Cricket</span><br/>
-                    <span className="time">sun - 10:00pm </span><br />
-                     <i class="fa-solid fa-location-dot"></i>&nbsp;
-                    <span className="address" > place</span>
-                  </p>
-                </div>
-              </div>
-              <div className="col-xxl-4 col-md-4 col-12 my-2 evant-btn">
-                <button className="regiser-btn" type="button">
-                  Register Now
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="col-xxl-6 col-md-12 col-12 card">
-            <div className="row events ">
-              <div className="col-xxl-7    col-md-6 col-sm-12 evant-img-text">
-                <div className="event-img">
-                  <img src={require("./../assets/img/1.png")} alt="..." />
-                </div>
-                <div className="evant-text">
-                  <p>
-                    <span className="name">Cricket</span><br/>
-                    <span className="time">sun - 10:00pm </span><br />
-                     <i class="fa-solid fa-location-dot"></i>&nbsp;
-                    <span className="address" > place</span>
-                  </p>
-                </div>
-              </div>
-              <div className="col-xxl-4 col-md-4 col-12 my-2 evant-btn">
-                <button className="regiser-btn" type="button">
-                  Register Now
-                </button>
-              </div>
-            </div>
-          </div> */}
+        <div className="space">
+          <div className="particle"></div>
+          <div className="particle"></div>
+          <div className="particle"></div>
+          <div className="particle"></div>
         </div>
-
-        <div className="row see-more my-5">
-          <div className="col-xxl-2 col-md-4 col-sm-12 see-btn">
-            <button className="see-more-btn" type="button">
-              SEE MORE
-            </button>
-          </div>
+        <div className="row">
+          {data.map((item, index) => {
+            return (
+              <div key={index} className="col-xxl-6 col-md-12 col-12 card">
+                <div className="row events ">
+                  <div className="col-xxl-8    col-md-8 col-sm-12 evant-img-text">
+                    <div className="col-4 event-img">
+                      <img
+                        src={EnvData.imageHost+item.event_img}
+                      />
+                    </div>
+                    <div className=" col-8 evant-text">
+                      <p>
+                        <span className="name">{item.event_name}</span>
+                        <br />
+                        <span className="time">day - {item.day} </span>
+                        <br />
+                        {/* <i className="fa-solid fa-location-dot"></i>&nbsp; */}
+                        <span className="address">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-xxl-4 col-md-4 col-12 my-2 evant-btn">
+                    <a href={item.event_link} target="_blank">
+                      <button className="regiser-btn" type="button">
+                        Register Now
+                      </button>
+                    </a>
+                    
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default TypeEvent
+export default TypeEvent;

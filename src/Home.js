@@ -8,9 +8,6 @@ import EventsList from "./components/EventsList";
 import Gallery from "./components/Gallery";
 import Footer from "./layouts/Footer";
 import { useEffect, useState } from "react";
-import axios from "axios";
-import LoadingScreen from "./components/LoaderScreen";
-
 function Home() {
   
   const [isLoading , setIsLoader] = useState(true);
@@ -25,6 +22,7 @@ function Home() {
       }
       const result = await res.json();
       setData(result.data);
+      console.log(result.data.event_type_list)
       setIsLoader(false)
     } catch (error) {
       console.log('Error fetching data:', error);
@@ -62,7 +60,9 @@ function Home() {
     
     
     <About />
-    <EventsList />
+    <EventsList
+      event_poster={data.event_type_list}
+    />
     <Gallery />
   </div>
     

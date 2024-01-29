@@ -5,7 +5,7 @@ function Footer({phone_no , facebook , instagram , youtube}) {
     <section id="contacts" >
         <footer>
       <div id="footer-top">
-        <div className="container">
+        <div className="container mt-5">
           <div className="row">
             <div className="col-md-4">
               <div className="phone">
@@ -47,7 +47,7 @@ function Footer({phone_no , facebook , instagram , youtube}) {
             </div>
             <div className="col-xxl-6 col-sm-6 Terms">
               <p className="gap-2">
-                CRAFTED BY
+              Develop by
                 <a
                   className="text-light"
                   href="https://www.linkedin.com/in/sameer-ali-6b4926212/"

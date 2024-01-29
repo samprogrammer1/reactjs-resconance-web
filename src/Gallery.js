@@ -36,8 +36,8 @@ export default function Gallery() {
         <div className="particle"></div>
       </div>
       <div className={model ? "model open" : "model"}>
-        <i class="fa-solid fa-xmark" onClick={() => setModel(false)}></i>
-        <img src={tempimgsrc} />
+        <i className="fa-solid fa-xmark" onClick={() => setModel(false)}></i>
+        <img src={tempimgsrc && tempimgsrc.toString()} />
       </div>
       <h1 className="titleHead text-center mt-5 mt-sm-1">GALLERY</h1>
       <Masonry
@@ -48,7 +48,7 @@ export default function Gallery() {
         {images.map((image, index) => (
           <div key={index} onClick={() => getImg(image)}>
             <img
-              src={image}
+              src={image && image.toString()}
               alt={`Gallery item ${index}`}
               className="card"
               style={{ width: "100%", display: "block" }}
