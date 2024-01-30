@@ -66,7 +66,12 @@ function TypeEvent() {
                       </p>
                     </div>
                   </div>
-                  <div className="col-xxl-4 col-md-4 col-12 my-2 evant-btn">
+                  <div className="col-xxl-4 col-md-4  col-12 my-2  evant-btn">
+                    <a href={item.event_link} target="_blank">
+                      <button className="details-btn" type="button">
+                        Rules
+                      </button>
+                    </a>
                     <a href={item.event_link} target="_blank">
                       <button className="regiser-btn" type="button">
                         Register Now

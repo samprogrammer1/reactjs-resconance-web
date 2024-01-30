@@ -19,7 +19,7 @@ function Gallery() {
       default: 3, // default number of columns
       1200: 3, // screen width 1200px - 3 columns
       800: 2, // screen width 800px - 2 columns
-      500: 1, // screen width 500px - 1 column
+      500: 2, // screen width 500px - 1 column
     };
   
     const [model, setModel] = useState(false);
@@ -34,7 +34,7 @@ const navigateToGallery = () => {
 };
   return (
     <section id="gallery" className='my-5'>
-        <h1 className="titleHead text-center mt-4">GALLERY</h1>
+        <h1 className="titleHead small-title-head text-center mt-4">GALLERY</h1>
         <div className={model ? "model open" : "model"}>
         <i className="fa-solid fa-xmark" onClick={() => setModel(false)}></i>
         <img src={tempimgsrc} />

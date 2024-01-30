@@ -1,7 +1,7 @@
 import React, {useState , useEffect} from 'react'
 
 function TimeCounter() {
-  const countDownDate = new Date("Feb 22, 2024 00:00:00").getTime();
+  const countDownDate = new Date("Feb 24, 2024 00:00:00").getTime();
 
     const [countdownTime, setCountdownTime] = useState({
         days: 0,
@@ -64,11 +64,11 @@ function TimeCounter() {
             </div>
           </div>
         </div>
-        <div className="timer-btn">
+        {/* <div className="timer-btn">
           <button className="ticket-btn" type="button">
             BUY TICKET
           </button>
-        </div>
+        </div> */}
       </section>
   )
 }

@@ -10,11 +10,12 @@ function Footer({phone_no , facebook , instagram , youtube}) {
             <div className="col-md-4">
               <div className="phone">
                 <h2>Phone</h2>
-                <p>+91 9876543210</p>
+                <a href="tel:+918890569447"><p>+91 88905 69447</p></a>
               </div>
               <div className="email">
                 <h2>Email</h2>
-                <p>Resonance2024@gmail.com</p>
+                <a href="mailto:Studentcouncil@jietjodhpur.ac.in"><p>Studentcouncil@jietjodhpur.ac.in</p></a>
+                <a href="mailto:Resonance@jietjodhpur.ac.in"><p>Resonance@jietjodhpur.ac.in</p></a>
               </div>
             </div>
             <div className="col-md-5">
@@ -47,7 +48,7 @@ function Footer({phone_no , facebook , instagram , youtube}) {
             </div>
             <div className="col-xxl-6 col-sm-6 Terms">
               <p className="gap-2">
-              Develop by
+              Developed by 
                 <a
                   className="text-light"
                   href="https://www.linkedin.com/in/sameer-ali-6b4926212/"

@@ -28,7 +28,7 @@ function EventsPoster({ posterData, image_path }) {
 
   return (
     <section id="resonance" className="">
-      <h1 className="titleHead text-center mt-4">DAYS</h1>
+      <h1 className="titleHead small-title-head text-center my-4">DAYS</h1>
       <div className="container mt-5">
         <div className="row">
           <Swiper

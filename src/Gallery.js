@@ -17,7 +17,7 @@ export default function Gallery() {
     default: 3, // default number of columns
     1200: 3, // screen width 1200px - 3 columns
     800: 2, // screen width 800px - 2 columns
-    500: 1, // screen width 500px - 1 column
+    500: 2, // screen width 500px - 1 column
   };
 
   const [model, setModel] = useState(false);
