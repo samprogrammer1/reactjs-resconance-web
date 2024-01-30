@@ -9,8 +9,7 @@ function TypeEvent() {
   const [data, setData] = useState([]);
   const fetchData = async () => {
     try {
-      console.log(" data " + process.env.REACT_APP_GET_API);
-      const res = await fetch("https://thejambh.com/api/event-data");
+      const res = await fetch(process.env.REACT_APP_GET_API);
       if (!res.ok) {
         throw new Error("Network response was not ok");
       }

@@ -21,7 +21,7 @@ export default function Gallery() {
   };
 
   const [model, setModel] = useState(false);
-  const [tempimgsrc, setTempImgSrc] = useState(false);
+  const [tempimgsrc, setTempImgSrc] = useState("");
   const getImg = (imgSrc) => {
     setTempImgSrc(imgSrc);
     setModel(true);
@@ -37,7 +37,7 @@ export default function Gallery() {
       </div>
       <div className={model ? "model open" : "model"}>
         <i className="fa-solid fa-xmark" onClick={() => setModel(false)}></i>
-        <img src={tempimgsrc && tempimgsrc.toString()} />
+        <img src={tempimgsrc} />
       </div>
       <h1 className="titleHead text-center mt-5 mt-sm-1">GALLERY</h1>
       <Masonry
@@ -48,7 +48,7 @@ export default function Gallery() {
         {images.map((image, index) => (
           <div key={index} onClick={() => getImg(image)}>
             <img
-              src={image && image.toString()}
+              src={image}
               alt={`Gallery item ${index}`}
               className="card"
               style={{ width: "100%", display: "block" }}

@@ -15,14 +15,12 @@ function Home() {
 
   const fetchData = async () => {
     try {
-      console.log(" data " + process.env.REACT_APP_GET_API)
-      const res = await fetch("https://thejambh.com/api/event-data");
+      const res = await fetch(process.env.REACT_APP_GET_API);
       if (!res.ok) {
         throw new Error('Network response was not ok');
       }
       const result = await res.json();
       setData(result.data);
-      console.log(result.data.event_type_list)
       setIsLoader(false)
     } catch (error) {
       console.log('Error fetching data:', error);

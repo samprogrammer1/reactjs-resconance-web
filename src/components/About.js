@@ -6,10 +6,11 @@ function About() {
         <h1 className="titleHead small-title-head text-center my-4">ABOUT US</h1>
         <div className="container" id="about">
           <div className="row">
-            <div className="col-xl-4 col-md-12 col-sm-12">
+            <div className="col-xl-6 col-md-6 col-sm-12">
               <h1 className="about-text">GET READY TO ENJOY WITH</h1>
               <h1 className="about-resonance">R E S O N A N C E</h1>
               <h1 className="about-num">2 0 2 4</h1>
+              <p>Welcome to Resonance, Jodhpur’s biggest vibrant Annual Festival hosted by the JIET Group, where creativity meets innovation. Dive into a mix of cultural, technical, and sports events designed to spark your imagination. Featuring special celebrity nights, from concerts to comedy, Resonance is an adventure in self-expression and discovery. Join us for an unforgettable experience!</p>
               <div className="about-all-btn">
                 
                 <button id="about-rugistar" type="button">
