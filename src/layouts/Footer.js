@@ -22,13 +22,13 @@ function Footer({phone_no , facebook , instagram , youtube}) {
               <div className="touch">
                 <h2>Keep In Touch</h2>
                 <div className="icon d-flex">
-                  <a href={instagram}>
+                  <a href="https://www.instagram.com/jiet_universe?igsh=enR3dmxvYXk0MHRs" target="_blank">
                     <i className="fa-brands fa-instagram d-flex justify-content-center align-items-center"></i>
                   </a>
-                  <a href={youtube} >
+                  <a href="https://youtube.com/@JIETUniverse?si=_gP3SDwRnJZIX6PA" target="_blank" >
                     <i className="fa-brands fa-youtube d-flex justify-content-center align-items-center"></i>
                   </a>
-                  <a href={facebook}>
+                  <a href="https://m.facebook.com/JIET.Jodhpur.Official" target="_blank">
                     <i className="fa-brands fa-facebook d-flex justify-content-center align-items-center"></i>
                   </a>
                   
