@@ -1006,6 +1006,10 @@ body::-webkit-scrollbar {
     font-size: 20px;
     font-weight: 600;
 }
+#footer-top .phone a {
+  text-decoration: none;
+}
+
 
 #footer-top .email h2 {
     color: #fff;
