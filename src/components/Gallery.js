@@ -2,18 +2,20 @@ import React, {useState} from 'react'
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 import { useHistory } from 'react-router-dom'
 import Masonry from 'react-masonry-css';
+import ENV_DATA from './../assets/json/data.json'
 
 
 
-
-function Gallery() {
+function Gallery({imageData}) {
     const history = useHistory();
     const images = [
-      
-      require("./../assets/img/gallery/3.jpg"),
-      require("./../assets/img/gallery/1.JPG"),
       require("./../assets/img/gallery/23.jpg"),
+      require("./../assets/img/gallery/1.jpg"),
+      require("./../assets/img/gallery/3.jpg"),
       require("./../assets/img/gallery/2.jpg"),
+      
+     
+      
     ];
     const breakpointColumnsObj = {
       default: 3, // default number of columns
@@ -32,6 +34,7 @@ function Gallery() {
 const navigateToGallery = () => {
   history.push('/gallery');
 };
+const isMobile = window.innerWidth <= 800;
   return (
     <section id="gallery" className='my-5'>
         <h1 className="titleHead small-title-head text-center mt-4">GALLERY</h1>
@@ -45,16 +48,24 @@ const navigateToGallery = () => {
         className="my-masonry-grid mt-5"
         columnClassName="my-masonry-grid_column"
       >
-        {images.map((image, index) => (
-          <div key={index} onClick={() => getImg(image)}>
+        {imageData.map((item, index) => (
+          <div key={index} onClick={() => getImg(ENV_DATA.imageHost +item.img)}>
             <img
-              src={image && image.toString()}
+              src={ENV_DATA.imageHost +item.img}
               alt={`Gallery item ${index}`}
               className="card"
               style={{ width: "100%", display: "block" }}
             />
           </div>
         ))}
+        {isMobile && <div  onClick={() => getImg(require("./../assets/img/gallery/1.jpg"))}>
+            <img
+              src={require("./../assets/img/gallery/1.jpg")}
+              alt={`Gallery item `}
+              className="card"
+              style={{ width: "100%", display: "block" }}
+            />
+          </div>}
       </Masonry>
         </div>
         <div className="gallery-see-more mt-5">

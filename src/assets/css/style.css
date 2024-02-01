@@ -419,7 +419,6 @@ body::-webkit-scrollbar {
 #about .about-text {
     color: white;
     word-wrap: break-word;
-    margin-top: 50px;
     font-family: Bebas Neue;
     font-size: 50px;
     font-weight: 400;

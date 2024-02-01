@@ -61,7 +61,7 @@ function Home() {
     <EventsList
       event_poster={data.event_type_list}
     />
-    <Gallery />
+    <Gallery imageData={data.home_gallery} />
   </div>
     
   );

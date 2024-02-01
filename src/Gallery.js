@@ -1,8 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Masonry from "react-masonry-css";
+import { useHistory } from "react-router-dom";
+import imghost from "./assets/json/data.json"
 export default function Gallery() {
+  const history = useHistory();
+  const [isLoading, setIsLoader] = useState(true);
+  const [data, setData] = useState([]);
+  const fetchData = async () => {
+    try {
+      const res = await fetch(process.env.REACT_APP_GET_API);
+      if (!res.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const result = await res.json();
+      const found = result.data.gallery;
+      console.log(found)
+        setData(found);
+      setIsLoader(true);
+    } catch (error) {
+      history.push('/404');
+      return;
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   const images = [
-    require("./assets/img/gallery/1.JPG"),
+    require("./assets/img/gallery/1.jpg"),
     require("./assets/img/gallery/2.jpg"),
     require("./assets/img/gallery/23.jpg"),
     require("./assets/img/gallery/7.jpg"),
@@ -39,23 +65,23 @@ export default function Gallery() {
         <i className="fa-solid fa-xmark" onClick={() => setModel(false)}></i>
         <img src={tempimgsrc} />
       </div>
-      <h1 className="titleHead text-center mt-5 mt-sm-1">GALLERY</h1>
-      <Masonry
+      <h1 className="titleHead text-center mt-lg-5 mt-sm-1">GALLERY</h1>
+      {isLoading && <Masonry
         breakpointCols={breakpointColumnsObj}
         className="my-masonry-grid mt-5"
         columnClassName="my-masonry-grid_column"
       >
-        {images.map((image, index) => (
-          <div key={index} onClick={() => getImg(image)}>
+        {data.map((item, index) => (
+          <div key={index} onClick={() => getImg(imghost.imageHost +item.img)}>
             <img
-              src={image}
+              src={imghost.imageHost +item.img}
               alt={`Gallery item ${index}`}
               className="card"
               style={{ width: "100%", display: "block" }}
             />
           </div>
         ))}
-      </Masonry>
+      </Masonry>}
     </section>
   );
 }

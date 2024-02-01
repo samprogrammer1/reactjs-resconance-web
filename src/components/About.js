@@ -4,9 +4,9 @@ function About() {
   return (
     <section id="about" >
         <h1 className="titleHead small-title-head text-center my-4">ABOUT US</h1>
-        <div className="container" id="about">
+        <div className="container mt-5" id="about">
           <div className="row">
-            <div className="col-xl-6 col-md-6 col-sm-12">
+            <div className="col-xl-6 col-md-6 col-sm-12 order-lg-1 order-2">
               <h1 className="about-text">GET READY TO ENJOY WITH</h1>
               <h1 className="about-resonance">R E S O N A N C E</h1>
               <h1 className="about-num">2 0 2 4</h1>
@@ -21,7 +21,11 @@ function About() {
                 </button>
               </div>
             </div>
-            <div className="col-md-12"></div>
+            <div className="col-xl-6 col-md-6 col-sm-12 order-lg-2 order-1 ">
+              <div className='card m-lg-5'>
+                <img src={require('./../assets/img/about-banner.png')} width="100%" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
