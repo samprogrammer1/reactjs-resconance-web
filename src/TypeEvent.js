@@ -58,8 +58,6 @@ function TypeEvent() {
                       <p>
                         <span className="name">{item.event_name}</span>
                         <br />
-                        <span className="time">day - {item.day} </span>
-                        <br />
                         {/* <i className="fa-solid fa-location-dot"></i>&nbsp; */}
                         <span className="address">{item.event_desc}.</span>
                       </p>
