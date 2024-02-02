@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom/cjs/react-router-dom';
 import { useHistory } from 'react-router-dom'
 import Masonry from 'react-masonry-css';
 import ENV_DATA from './../assets/json/data.json';
-import img from '../assets/img/gallery/01.jpg'
+import img from '../assets/img/gallery/1.jpg'
 
 
 

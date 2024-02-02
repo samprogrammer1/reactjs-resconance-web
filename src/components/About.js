@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom/cjs/react-router-dom';
 
 function About() {
   return (
@@ -13,13 +14,15 @@ function About() {
               <p>Welcome to Resonance, Jodhpur’s biggest vibrant Annual Festival hosted by the JIET Group, where creativity meets innovation. Dive into a mix of cultural, technical, and sports events designed to spark your imagination. Featuring special celebrity nights, from concerts to comedy, Resonance is an adventure in self-expression and discovery. Join us for an unforgettable experience!</p>
               <div className="about-all-btn">
                 
+                <Link to='/accommodation' >
                 <button id="about-rugistar" type="button">
                   Register NOW
                 </button>
+                </Link>
               </div>
             </div>
             <div className="col-xl-6 col-md-6 col-sm-12 order-lg-2 order-1 ">
-              <div className='card m-lg-5'>
+              <div className='card m-lg-5 mt-lg-0'>
                 <img src={require('./../assets/img/about-banner.png')} width="100%" alt='banner' />
               </div>
             </div>

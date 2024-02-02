@@ -992,6 +992,9 @@ body::-webkit-scrollbar {
   color: #a9a0a0;
 }
 
+#accommodation p {
+  text-align: center;
+}
 
 #footer-top {
     padding-bottom: 20px;
@@ -1012,6 +1015,7 @@ body::-webkit-scrollbar {
     color: #5f5a5a;
     font-size: 20px;
     font-weight: 600;
+    line-height: normal;
 }
 #footer-top .phone a {
   text-decoration: none;

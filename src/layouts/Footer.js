@@ -9,8 +9,13 @@ function Footer({phone_no , facebook , instagram , youtube}) {
           <div className="row">
             <div className="col-md-4">
               <div className="phone">
-                <h2>Phone</h2>
-                <a href="tel:+918890569447"><p>+91 88905 69447</p></a>
+                <h2>Contact Us</h2>
+                <a href="tel:+918890569447">
+                  <p>Bhavesh Kumar Parmar <br/>+91 88905 69447</p>
+                </a>
+                <a href="tel:+918690756606">
+                  <p>Manavjeet Singh  <br/>+91 8690756606</p>
+                </a>
               </div>
               <div className="email">
                 <h2>Email</h2>

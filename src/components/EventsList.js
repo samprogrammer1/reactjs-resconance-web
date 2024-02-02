@@ -11,7 +11,7 @@ function EventsList({event_poster}) {
           {
             event_poster.map((item , index) => {
               return (
-                <div key={index} className="col-xxl-4 col-lg-4 col-md-6 col-12 col-sm-12">
+                <div key={index} className="col-xxl-3 col-lg-3 col-md-6 col-12 col-sm-12">
                   <div className="card">
                     {/* <a href="#"> */}
                       {console.log()}

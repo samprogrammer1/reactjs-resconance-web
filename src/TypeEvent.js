@@ -61,16 +61,18 @@ function TypeEvent() {
                         <span className="time">day - {item.day} </span>
                         <br />
                         {/* <i className="fa-solid fa-location-dot"></i>&nbsp; */}
-                        <span className="address">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                        <span className="address">{item.event_desc}.</span>
                       </p>
                     </div>
                   </div>
                   <div className="col-xxl-4 col-md-4  col-12 my-2  evant-btn">
-                    <a href={item.event_link} target="_blank">
-                      <button className="details-btn" type="button">
-                        Rules
-                      </button>
-                    </a>
+                    {
+                      item.rules_link && <a href={item.rules_link} target="_blank">
+                        <button className="details-btn" type="button">
+                          Rules
+                        </button>
+                      </a>
+                    }
                     <a href={item.event_link} target="_blank">
                       <button className="regiser-btn" type="button">
                         Register Now
