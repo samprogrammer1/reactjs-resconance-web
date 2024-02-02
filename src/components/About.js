@@ -16,11 +16,6 @@ function About() {
                 <button id="about-rugistar" type="button">
                   Register NOW
                 </button>
-                <a href='https://forms.gle/Rk9mFKC7nZpKVSgr9' target='_blank'>
-                  <button id="about-more" className="about-btn" type="button">
-                    Accommodation
-                  </button>
-                </a>
               </div>
             </div>
             <div className="col-xl-6 col-md-6 col-sm-12 order-lg-2 order-1 ">
