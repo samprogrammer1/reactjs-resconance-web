@@ -49,14 +49,14 @@ const isMobile = window.innerWidth <= 800;
             />
           </div>
         ))}
-        {isMobile && <div  onClick={() => getImg(require("../assets/img/gallery/1.jpg"))}>
+        {/* {isMobile && <div  onClick={() => getImg(require("../assets/img/gallery/1.jpg"))}>
             <img
               src={require("./../assets/img/gallery/1.jpg")}
               alt={`Gallery item `}
               className="card"
               style={{ width: "100%", display: "block" }}
             />
-          </div>}
+          </div>} */}
       </Masonry>
         </div>
         <div className="gallery-see-more mt-5">
