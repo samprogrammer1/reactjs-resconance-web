@@ -114,7 +114,7 @@ function AppBar() {
                 )}
               </li>
               <li className="nav-item">
-                {currentPath != "/" ? (
+                {currentPath != "/#evants" ? (
                   <Link className="nav-link" to="/">
                     Events
                   </Link>

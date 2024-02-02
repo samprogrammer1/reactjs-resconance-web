@@ -39,7 +39,7 @@ function Footer({phone_no , facebook , instagram , youtube}) {
         </div>
       </div>
       <div id="footer-buttom">
-        <div className="container">
+        <div className="container-fluid">
           <div className="row footer-buttom">
             <div className="col-xxl-6 col-sm-6 copyright">
               <p>
