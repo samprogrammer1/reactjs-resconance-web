@@ -8,15 +8,6 @@ import ENV_DATA from './../assets/json/data.json'
 
 function Gallery({imageData}) {
     const history = useHistory();
-    const images = [
-      require("./../assets/img/gallery/23.jpg"),
-      require("./../assets/img/gallery/1.jpg"),
-      require("./../assets/img/gallery/3.jpg"),
-      require("./../assets/img/gallery/2.jpg"),
-      
-     
-      
-    ];
     const breakpointColumnsObj = {
       default: 3, // default number of columns
       1200: 3, // screen width 1200px - 3 columns
@@ -58,7 +49,7 @@ const isMobile = window.innerWidth <= 800;
             />
           </div>
         ))}
-        {isMobile && <div  onClick={() => getImg(require("./../assets/img/gallery/1.jpg"))}>
+        {isMobile && <div  onClick={() => getImg(require("../assets/img/gallery/1.jpg"))}>
             <img
               src={require("./../assets/img/gallery/1.jpg")}
               alt={`Gallery item `}

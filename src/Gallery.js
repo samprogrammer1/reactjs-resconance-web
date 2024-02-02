@@ -26,19 +26,6 @@ export default function Gallery() {
   useEffect(() => {
     fetchData();
   }, []);
-
-  const images = [
-    require("./assets/img/gallery/1.jpg"),
-    require("./assets/img/gallery/2.jpg"),
-    require("./assets/img/gallery/23.jpg"),
-    require("./assets/img/gallery/7.jpg"),
-    require("./assets/img/gallery/3.jpg"),
-    require("./assets/img/gallery/6.jpg"),
-    require("./assets/img/gallery/4.jpg"),
-   ,
-   
-    // Add more images here
-  ];
   const breakpointColumnsObj = {
     default: 3, // default number of columns
     1200: 3, // screen width 1200px - 3 columns

@@ -20,7 +20,7 @@ function About() {
             </div>
             <div className="col-xl-6 col-md-6 col-sm-12 order-lg-2 order-1 ">
               <div className='card m-lg-5'>
-                <img src={require('./../assets/img/about-banner.png')} width="100%" />
+                <img src={require('./../assets/img/about-banner.png')} width="100%" alt='banner' />
               </div>
             </div>
           </div>
