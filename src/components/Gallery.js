@@ -2,7 +2,8 @@ import React, {useState} from 'react'
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 import { useHistory } from 'react-router-dom'
 import Masonry from 'react-masonry-css';
-import ENV_DATA from './../assets/json/data.json'
+import ENV_DATA from './../assets/json/data.json';
+import img from '../assets/img/gallery/01.jpg'
 
 
 
@@ -49,9 +50,9 @@ const isMobile = window.innerWidth <= 800;
             />
           </div>
         ))}
-        {isMobile && <div  onClick={() => getImg(require("../assets/img/gallery/1.jpg"))}>
+        {isMobile && <div  onClick={() => getImg(img)}>
             <img
-              src={require("../assets/img/gallery/1.jpg")}
+              src={img}
               alt={`Gallery item `}
               className="card"
               style={{ width: "100%", display: "block" }}
