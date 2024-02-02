@@ -4,7 +4,8 @@ const Accommodation = () => {
   return (
     <section id="accommodation" className='mt-5' >
         <h1 className="titleHead small-title-head text-center my-5 pt-lg-5">Accommodation</h1>
-        <div className="container mt-5" id="about">
+        <div className="container d-flex justify-content-center mt-5" id="about">
+            <div>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
@@ -21,6 +22,7 @@ const Accommodation = () => {
                         Accommodation
                     </button>
                 </a>
+            </div>
             </div>
         </div>
     </section>
