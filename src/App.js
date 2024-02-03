@@ -9,6 +9,8 @@ import NotFound from './NotFound';
 import LoadingScreen from './components/LoaderScreen';
 import TypeEvent from './TypeEvent';
 import Accommodation from './Accommodation';
+import Notices from './Notices';
+import Events from './Events';
 
 
 const App = () => {
@@ -24,6 +26,8 @@ const App = () => {
           <Route path="/" exact component={Home} />
           <Route path="/gallery" component={Gallery} />
           <Route path="/events/:type" component={TypeEvent} />
+          <Route path="/notices" component={Notices} />
+          <Route path="/events" component={Events} />
           <Route path="/accommodation" component={Accommodation} />
 
           {/* Custom 404 page */}

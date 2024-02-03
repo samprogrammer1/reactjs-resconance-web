@@ -4,7 +4,8 @@ import { useHistory } from 'react-router-dom'
 import Masonry from 'react-masonry-css';
 import ENV_DATA from './../assets/json/data.json';
 import img from '../assets/img/gallery/01.jpg'
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 function Gallery({imageData}) {
@@ -42,9 +43,10 @@ const isMobile = window.innerWidth <= 800;
       >
         {imageData.map((item, index) => (
           <div key={index} onClick={() => getImg(ENV_DATA.imageHost +item.img)}>
-            <img
-              src={ENV_DATA.imageHost +item.img}
+            <LazyLoadImage
               alt={`Gallery item ${index}`}
+              effect="blur"
+              src={ENV_DATA.imageHost +item.img}
               className="card"
               style={{ width: "100%", display: "block" }}
             />

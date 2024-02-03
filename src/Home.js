@@ -34,11 +34,13 @@ function Home() {
   },[])
 
   return (
-    isLoading ? <div
-      className="container"
+    isLoading ? 
+    <div
+      className="container d-flex justify-content-center vh-100 w-100 align-items-center"
     >
       <h2>Coming Soon</h2>
-    </div> : <div className="App">
+    </div> : 
+    <div className="App">
     <section id="home">
       <div className="home-container">
         <img className="home-page-banner" src={banner} alt="image" />

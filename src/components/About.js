@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom/cjs/react-router-dom';
 
 function About() {
   return (
-    <section id="about" >
+    <section id="notice" >
         <h1 className="titleHead small-title-head text-center my-4">ABOUT US</h1>
         <div className="container mt-5" id="about">
           <div className="row">
@@ -15,9 +15,9 @@ function About() {
               <div className="about-all-btn">
                 
                 <Link to='/accommodation' >
-                <button id="about-rugistar" type="button">
-                  Register NOW
-                </button>
+                  <button id="about-rugistar" type="button">
+                    Register NOW
+                  </button>
                 </Link>
               </div>
             </div>

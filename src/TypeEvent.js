@@ -6,6 +6,7 @@ function TypeEvent() {
   const { type } = useParams();
   const history = useHistory();
   const [isLoading, setIsLoader] = useState(true);
+  const [title, setTitle] = useState("");
   const [data, setData] = useState([]);
   const fetchData = async () => {
     try {
@@ -18,6 +19,7 @@ function TypeEvent() {
         (item) => item.event_type === type
       );
       if (found) {
+        setTitle(found.event_title);
         setData(found.data);
       }else {
         history.push('/404');
@@ -35,7 +37,7 @@ function TypeEvent() {
   }, []);
   return (
     <section id="events" className="my-md-5">
-      <h1 className="titleHead text-center mt-5 pt-md-5 pt-sm-2">EVENTS</h1>
+      <h1 className="titleHead text-center mt-5 pt-md-5 pt-sm-2">{title} Events</h1>
       <div className="container">
         <div className="space">
           <div className="particle"></div>
@@ -43,7 +45,20 @@ function TypeEvent() {
           <div className="particle"></div>
           <div className="particle"></div>
         </div>
+        {
+          isLoading && <div
+          className="container d-flex justify-content-center vh-100 w-100 align-items-center"
+        >
+          <h2>Coming Soon</h2>
+        </div>
+        }
         <div className="row">
+          {data.length == 0 && <div
+          className="container coming-soon d-flex justify-content-center vh-100 w-100 align-items-center"
+        >
+          <h2 className="text-light">Coming Soon</h2>
+        </div>}
+
           {data.map((item, index) => {
             return (
               <div key={index} className="col-xxl-6 col-md-12 col-12 card">

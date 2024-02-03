@@ -5,6 +5,8 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function EventsPoster({ posterData, image_path }) {
   const tiltElements = useRef([]);
@@ -66,7 +68,11 @@ function EventsPoster({ posterData, image_path }) {
               <SwiperSlide key={index}>
                 <div ref={(element) => (tiltElements.current[index] = element)} className="resonance-card mx-3  d-flex justify-content-center">
                   <div className="card ">
-                    <img src={image_path + data.img} className="card-img-top" alt="..." />
+                    <LazyLoadImage
+                      alt={`event-poster item ${index}`}
+                      effect="blur"
+                      src={image_path + data.img} className="card-img-top"
+                    />
                     <div className="day">DAY {data.day}</div>
                   </div>
                 </div>

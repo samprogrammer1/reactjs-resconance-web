@@ -36,7 +36,9 @@ function Footer({phone_no , facebook , instagram , youtube}) {
                   <a href="https://m.facebook.com/JIET.Jodhpur.Official" target="_blank">
                     <i className="fa-brands fa-facebook d-flex justify-content-center align-items-center"></i>
                   </a>
-                  
+                </div>
+                <div className="d-flex mt-4">
+                  <img src={require('../assets/img/sponsor/94.3MYFM-LOGO.png')} alt="94.3 MyFM" width="80px" />
                 </div>
               </div>
             </div>

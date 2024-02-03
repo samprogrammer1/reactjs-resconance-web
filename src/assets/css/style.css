@@ -851,7 +851,10 @@ body::-webkit-scrollbar {
   .my-masonry-grid_column > div {
     margin-bottom: 30px;
   }
-  
+
+  #events .coming-soon {
+    height: 50vh !important;
+  }
 
 #events .see-more-btn {
     background-color: #000;
@@ -878,6 +881,7 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center;
 }
+
 
 
 #gallery .container {
@@ -992,6 +996,11 @@ body::-webkit-scrollbar {
   color: #a9a0a0;
 }
 
+#accommodation ul li {
+  text-align: justify;
+    color: #5f5a5a;
+    font-weight: 500;
+}
 
 #footer-top {
     padding-bottom: 20px;

@@ -7,9 +7,26 @@ import { Link as ScrollLink } from "react-scroll";
 function AppBar() {
   const location = useLocation();
   const currentPath = location.pathname;
-  console.log("Current Path:", currentPath);
+  
   const [activeSection, setActiveSection] = useState("");
+  const [offcanvasVisible, setOffcanvasVisible] = useState(false);
 
+  const toggleOffcanvas = () => {
+    setOffcanvasVisible(true);
+  };
+
+  const closeOffcanvas = () => {
+    setOffcanvasVisible(false);
+  };
+
+  const handleLinkClick = (section) => {
+    setActiveSection(section);
+    closeOffcanvas();
+  };
+  useEffect(() => {
+    closeOffcanvas();
+  },[location])
+  console.log(offcanvasVisible)
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll("section");
@@ -40,14 +57,14 @@ function AppBar() {
         <button
           className="navbar-toggler"
           type="button"
+          onClick={toggleOffcanvas}
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasDarkNavbar"
-          aria-controls="offcanvasDarkNavbar"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
         <div
-          className="offcanvas offcanvas-end custom-canvas-bg text-bg-dark custom-canvas-bg"
+          className={`offcanvas offcanvas-end custom-canvas-bg text-bg-dark custom-canvas-bg ${offcanvasVisible && 'show'}`}
           id="offcanvasDarkNavbar"
           aria-labelledby="offcanvasDarkNavbarLabel"
         >
@@ -66,9 +83,17 @@ function AppBar() {
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
                 {currentPath != "/" ? (
-                  <Link className="nav-link" to="/">
+                  <NavLink 
+                    className={`nav-link ${
+                      activeSection === "home" ? "active" : ""
+                    }`}
+                    
+                    to="/"
+                    onClick={() => handleLinkClick("home")}
+                    // data-bs-dismiss="offcanvas"
+                  >
                     Home
-                  </Link>
+                  </NavLink>
                 ) : (
                   <ScrollLink
                     activeClass="active"
@@ -91,7 +116,7 @@ function AppBar() {
 
               <li className="nav-item">
                 {currentPath != "/" ? (
-                  <Link className="nav-link" to="/">
+                  <Link className="nav-link" to="/" >
                     About
                   </Link>
                 ) : (
@@ -114,8 +139,10 @@ function AppBar() {
                 )}
               </li>
               <li className="nav-item">
-                {currentPath != "/#evants" ? (
-                  <Link className="nav-link" to="/">
+                {currentPath != "/" ? (
+                  <Link className={`nav-link ${
+                    activeSection === "events" ? "active" : ""
+                  }`} to="/events" onClick={() => handleLinkClick("events")}>
                     Events
                   </Link>
                 ) : (
@@ -138,7 +165,7 @@ function AppBar() {
 
               <li className="nav-item">
                 {currentPath != "/" ? (
-                  <Link className="nav-link" to="/">
+                  <Link className="nav-link" to="/" onClick={() => handleLinkClick("gallery")}>
                     Gallery
                   </Link>
                 ) : (
@@ -152,7 +179,7 @@ function AppBar() {
                     className={`nav-link ${
                       activeSection === "gallery" ? "active" : ""
                     }`}
-                    onClick={() => setActiveSection("gallery")}
+                    onClick={() => handleLinkClick("gallery")}
                     data-bs-dismiss="offcanvas"
                     aria-label="Close"
                   >
@@ -171,12 +198,19 @@ function AppBar() {
                   className={`nav-link ${
                     activeSection === "contacts" ? "active" : ""
                   }`}
-                  onClick={() => setActiveSection("contacts")}
+                  onClick={() => handleLinkClick("gallery")}
                   data-bs-dismiss="offcanvas"
                   aria-label="Close"
                 >
                   Contact
                 </ScrollLink>
+              </li>
+              <li className="nav-item">
+                  <NavLink className={`nav-link ${
+                    currentPath === "/notices" ? "active" : ""
+                  }`} onClick={() => handleLinkClick("notices")}  to="/notices"   >
+                    Notices
+                  </NavLink>
               </li>
             </ul>
           </div>
