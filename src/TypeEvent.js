@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useParams  , useHistory} from "react-router-dom";
-import EnvData from "./assets/json/data.json"
+import { useParams, useHistory } from "react-router-dom";
+import EnvData from "./assets/json/data.json";
 
 function TypeEvent() {
   const { type } = useParams();
@@ -21,13 +21,13 @@ function TypeEvent() {
       if (found) {
         setTitle(found.event_title);
         setData(found.data);
-      }else {
-        history.push('/404');
+      } else {
+        history.push("/404");
         return;
       }
       setIsLoader(false);
     } catch (error) {
-      history.push('/404');
+      history.push("/404");
       return;
     }
   };
@@ -37,7 +37,9 @@ function TypeEvent() {
   }, []);
   return (
     <section id="events" className="my-md-5">
-      <h1 className="titleHead text-center mt-5 pt-md-5 pt-sm-2">{title} Events</h1>
+      <h1 className="titleHead text-center mt-5 pt-md-5 pt-sm-2">
+        {title} Events
+      </h1>
       <div className="container">
         <div className="space">
           <div className="particle"></div>
@@ -45,19 +47,17 @@ function TypeEvent() {
           <div className="particle"></div>
           <div className="particle"></div>
         </div>
-        {
-          isLoading && <div
-          className="container d-flex justify-content-center vh-100 w-100 align-items-center"
-        >
-          <h2>Coming Soon</h2>
-        </div>
-        }
+        {isLoading && (
+          <div className="container d-flex justify-content-center vh-100 w-100 align-items-center">
+            <h2>Coming Soon</h2>
+          </div>
+        )}
         <div className="row">
-          {data.length == 0 && <div
-          className="container coming-soon d-flex justify-content-center vh-100 w-100 align-items-center"
-        >
-          <h2 className="text-light">Coming Soon</h2>
-        </div>}
+          {data.length == 0 && (
+            <div className="container coming-soon d-flex justify-content-center vh-100 w-100 align-items-center">
+              <h2 className="text-light">Coming Soon</h2>
+            </div>
+          )}
 
           {data.map((item, index) => {
             return (
@@ -65,9 +65,7 @@ function TypeEvent() {
                 <div className="row events ">
                   <div className="col-xxl-8    col-md-8 col-sm-12 evant-img-text">
                     <div className="col-4 event-img">
-                      <img
-                        src={EnvData.imageHost+item.event_img}
-                      />
+                      <img src={EnvData.imageHost + item.event_img} />
                     </div>
                     <div className=" col-8 evant-text">
                       <p>
@@ -79,19 +77,20 @@ function TypeEvent() {
                     </div>
                   </div>
                   <div className="col-xxl-4 col-md-4  col-12 my-2  evant-btn">
-                    {
-                      item.rules_link && <a href={item.rules_link} target="_blank">
+                    {item.rules_link && (
+                      <a href={item.rules_link} target="_blank">
                         <button className="details-btn" type="button">
                           Rules
                         </button>
                       </a>
-                    }
-                    <a href={item.event_link} target="_blank">
-                      <button className="regiser-btn" type="button">
-                        Register Now
-                      </button>
-                    </a>
-                    
+                    )}
+                    {item.event_link && (
+                      <a href={item.event_link} target="_blank">
+                        <button className="regiser-btn" type="button">
+                          {item.event_link ? "Register Now" : "Coming Soon"}
+                        </button>
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

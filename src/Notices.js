@@ -28,7 +28,8 @@ const Notices = () => {
                   Mechanical Engineering <br />
                   Hostel Residents <br />
                   Master of Computer Applications (MCA) + JIH Management <br />
-                                  </p>
+                </p>
+                <p>One student participate 2 outdoor and 2 indoor events only</p>
             </div>
         </div>
     </section>

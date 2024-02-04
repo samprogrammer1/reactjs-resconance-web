@@ -1,5 +1,6 @@
 {
   "name": "resonance-web",
+  "homepage": "https://resonance2k24.jietjodhpur.ac.in/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
