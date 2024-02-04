@@ -16,6 +16,19 @@ const Notices = () => {
                     <li>All three days' food (Lunch and Dinner) will be available in the Hostel Mess.</li>
                     <li>Registration for Resonance will commence from 4th February 2024</li>
                 </ul>
+                <h2 className='text-left'>Sports General rules</h2>
+                <p>we are allowing the following departments to merge their teams:</p>
+                <p>
+                  Civil Engineering <br/>
+                  Computer Science and Engineering (CSE) <br />
+                  JDAT + Design <br />
+                  MBA <br />
+                  Nursing + Pharmacy <br />
+                  Electrical Engineering, Electronics and Communication Engineering (ECE) <br /> 
+                  Mechanical Engineering <br />
+                  Hostel Residents <br />
+                  Master of Computer Applications (MCA) + JIH Management <br />
+                                  </p>
             </div>
         </div>
     </section>

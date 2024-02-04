@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink ,useHistory  } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { Link as ScrollLink } from "react-scroll";
 
 function AppBar() {
   const location = useLocation();
+  const history = useHistory();
   const currentPath = location.pathname;
   
   const [activeSection, setActiveSection] = useState("");
   const [offcanvasVisible, setOffcanvasVisible] = useState(false);
 
   const toggleOffcanvas = () => {
-    setOffcanvasVisible(true);
+    setOffcanvasVisible(!offcanvasVisible);
   };
 
   const closeOffcanvas = () => {
@@ -23,9 +24,19 @@ function AppBar() {
     setActiveSection(section);
     closeOffcanvas();
   };
-  useEffect(() => {
-    closeOffcanvas();
-  },[location])
+ useEffect(() => {
+  
+    // Add this effect to handle offcanvas visibility based on the URL
+    const offcanvasElement = document.getElementsByClassName("offcanvas-backdrop")[0];
+
+    // Check if the element exists before removing the class
+    if (offcanvasElement) {
+      offcanvasElement.classList.remove("show");
+      document.body.style.overflow = 'visible';
+      closeOffcanvas();
+    }
+
+  }, [location.pathname]);
   console.log(offcanvasVisible)
   useEffect(() => {
     const handleScroll = () => {
@@ -50,7 +61,7 @@ function AppBar() {
   }, []);
   return (
     <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div className="container">
+      <div className="container" id="navbar">
         <NavLink className="navbar-brand" to="/">
           <img src={require("./../assets/img/logo1.png")} width="120px" />
         </NavLink>
@@ -64,7 +75,7 @@ function AppBar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div
-          className={`offcanvas offcanvas-end custom-canvas-bg text-bg-dark custom-canvas-bg ${offcanvasVisible && 'show'}`}
+          className={`offcanvas offcanvas-end custom-canvas-bg text-bg-dark custom-canvas-bg ${offcanvasVisible ? 'show' : ''}`}
           id="offcanvasDarkNavbar"
           aria-labelledby="offcanvasDarkNavbarLabel"
         >
@@ -81,9 +92,10 @@ function AppBar() {
           </div>
           <div className="offcanvas-body">
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+              {console.log(activeSection)}
               <li className="nav-item">
                 {currentPath != "/" ? (
-                  <NavLink 
+                  <Link 
                     className={`nav-link ${
                       activeSection === "home" ? "active" : ""
                     }`}
@@ -93,7 +105,7 @@ function AppBar() {
                     // data-bs-dismiss="offcanvas"
                   >
                     Home
-                  </NavLink>
+                  </Link>
                 ) : (
                   <ScrollLink
                     activeClass="active"
@@ -102,9 +114,7 @@ function AppBar() {
                     smooth={true}
                     offset={-70}
                     duration={200}
-                    className={`nav-link ${
-                      activeSection === "home" ? "active" : ""
-                    }`}
+                    className={`nav-link `}
                     onClick={() => setActiveSection("home")}
                     data-bs-dismiss="offcanvas"
                     aria-label="Close"
@@ -165,7 +175,9 @@ function AppBar() {
 
               <li className="nav-item">
                 {currentPath != "/" ? (
-                  <Link className="nav-link" to="/" onClick={() => handleLinkClick("gallery")}>
+                  <Link className={`nav-link ${
+                    currentPath === "/gallery" ? "active" : ""
+                  }`} onClick={() => handleLinkClick("gallery")}  to="/" >
                     Gallery
                   </Link>
                 ) : (
@@ -198,7 +210,7 @@ function AppBar() {
                   className={`nav-link ${
                     activeSection === "contacts" ? "active" : ""
                   }`}
-                  onClick={() => handleLinkClick("gallery")}
+                  onClick={() => handleLinkClick("contacts")}
                   data-bs-dismiss="offcanvas"
                   aria-label="Close"
                 >
@@ -206,15 +218,16 @@ function AppBar() {
                 </ScrollLink>
               </li>
               <li className="nav-item">
-                  <NavLink className={`nav-link ${
+                  <Link className={`nav-link ${
                     currentPath === "/notices" ? "active" : ""
-                  }`} onClick={() => handleLinkClick("notices")}  to="/notices"   >
+                  }`} onClick={() => {handleLinkClick("notices"); }}  to="/notices"   >
                     Notices
-                  </NavLink>
+                  </Link>
               </li>
             </ul>
           </div>
         </div>
+
       </div>
     </nav>
   );
