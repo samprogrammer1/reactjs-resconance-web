@@ -307,7 +307,9 @@ body::-webkit-scrollbar {
 .navbar-nav .nav-item {
     margin: 5px 10px;
 }
-
+.navbar-nav .nav-item a {
+  cursor: pointer;
+}
 .navbar-nav .nav-link {
     color: var(--white-color) !important;
     font-size: 17px !important;
@@ -315,6 +317,7 @@ body::-webkit-scrollbar {
     font-weight: 700 !important;
     letter-spacing: 1.2px;
 }
+
 
 .navbar-nav .nav-link.active {
     /* color: var(--main-color) !important; */

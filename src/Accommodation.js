@@ -12,8 +12,7 @@ const Accommodation = () => {
             <p><span className='text-light'>Boys : </span>The Common Halls provide a robust and interactive living arrangement for male participants. These spaces are designed to foster camaraderie, networking, and rest, ensuring you remain energized and connected throughout the event. </p>
             <h5 className='text-danger'>Important Note for Accommodation Registration:</h5>
             <p>To secure your accommodation on campus, both students and faculty members are required to register. Please use the link provided below and ensure to register with your college-issued email ID. This step is crucial for verifying your affiliation and facilitating a smooth accommodation process.</p>
-            <p>We look forward to welcoming you to our campus and hope you will have a memorable and enriching experience at Resonance 2K24. If you have any questions or need further assistance with your accommodation needs, please do not hesitate to reach out to us.
-add contact details of vedant and anuj</p>
+            <p>We look forward to welcoming you to our campus and hope you will have a memorable and enriching experience at Resonance 2K24. If you have any questions or need further assistance with your accommodation needs, please do not hesitate to reach out to us.</p>
             <a href="tel:+917229090573" className='text-decoration-none mt-5'>
                 <p>Vedant Gurjar <br/>+91 72290 90573</p>
             </a>

@@ -177,7 +177,7 @@ function AppBar() {
                 {currentPath != "/" ? (
                   <Link className={`nav-link ${
                     currentPath === "/gallery" ? "active" : ""
-                  }`} onClick={() => handleLinkClick("gallery")}  to="/" >
+                  }`} onClick={() => handleLinkClick("gallery")}  to="/gallery" >
                     Gallery
                   </Link>
                 ) : (
@@ -185,6 +185,7 @@ function AppBar() {
                     activeClass="active"
                     to="gallery"
                     spy={true}
+                    
                     smooth={true}
                     offset={-70}
                     duration={200}

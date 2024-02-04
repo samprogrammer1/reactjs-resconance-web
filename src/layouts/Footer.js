@@ -37,8 +37,11 @@ function Footer({phone_no , facebook , instagram , youtube}) {
                     <i className="fa-brands fa-facebook d-flex justify-content-center align-items-center"></i>
                   </a>
                 </div>
-                <div className="d-flex mt-4">
-                  <img src={require('../assets/img/sponsor/94.3MYFM-LOGO.png')} alt="94.3 MyFM" width="80px" />
+                <div className="mt-4">
+                  <h2 className="pb-0">Radio Partner</h2>
+                  <div className="d-flex">
+                    <img src={require('../assets/img/sponsor/94.3MYFM-LOGO.png')} alt="94.3 MyFM" width="80px" />
+                  </div>
                 </div>
               </div>
             </div>
