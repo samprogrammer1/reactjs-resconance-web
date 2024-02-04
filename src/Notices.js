@@ -16,7 +16,7 @@ const Notices = () => {
                     <li>All three days' food (Lunch and Dinner) will be available in the Hostel Mess.</li>
                     <li>Registration for Resonance will commence from 4th February 2024</li>
                 </ul>
-                <h2 className='text-left'>Sports General rules</h2>
+                <h2 className='text-left text-danger'>Sports General rules</h2>
                 <p>we are allowing the following departments to merge their teams:</p>
                 <p>
                   Civil Engineering <br/>
