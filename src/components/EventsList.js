@@ -29,7 +29,7 @@ function EventsList({event_poster}) {
                               <a href="#" >Coming Soon</a> : 
                               <Link to={`/events/${item.event_type}`}>Register Here</Link> :
                               item.data.length === 0 ? <a href="#" >Coming Soon</a>:
-                             <a href="https://forms.gle/wPYBkWncjAsMiZb97" target="_blank" >Register Now</a>
+                             <a href="https://forms.gle/jm9UaxrCAoMMd28u9" target="_blank" >Register Now</a>
                           }
                           
                         </div>
